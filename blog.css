@@ -1,0 +1,72 @@
+ *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    } 
+    #header{
+        display: grid;
+        grid-template-columns:repeat(12,1fr);
+        grid-template-rows: 100px;
+        background-color: black;
+        grid-gap: 5px;
+    }
+    #logo{
+        grid-column: 1/5;
+    }
+    #nav{
+     
+        grid-column: 5/-1;
+        align-items: center;
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 20px;
+        font-size: 28px;
+    }
+    #nav ul{
+        display: flex;
+        justify-content: flex-end;
+        gap: 30px;
+        padding-right: 20px;
+        align-items: center;
+        color: white;
+    }
+    .list-style{
+        list-style: none;
+        
+    
+    }
+    .list-style A{
+        text-decoration: none;
+        color: white;
+    }
+    .icons{
+        width: 40px;
+        height: 34px;
+    }
+    .burger-nav{
+        color: aliceblue;
+        width: 45px;
+        height: 30px;
+        position: absolute;
+        right: 72px;
+        display: none;
+    }
+    #container{
+        width: 90%;
+        margin: auto;
+        
+        
+
+    }
+    #container p{
+        font-weight: 300;
+        width: 60%;
+    }
+    .article{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 95%;
+        margin: auto;
+    }

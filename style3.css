@@ -1,0 +1,246 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+#main{
+    width: 90%;
+    margin: auto;
+}
+#header{
+    display: grid;
+    grid-template-columns:repeat(12,1fr);
+    grid-template-rows: 100px;
+    background-color: black;
+    grid-gap: 5px;
+}
+#logo{
+    grid-column: 1/5;
+}
+#nav{
+ 
+    grid-column: 5/-1;
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+    font-size: 28px;
+    font-family: ;
+}
+#nav ul{
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    padding-right: 20px;
+    align-items: center;
+    color: white;
+}
+.list-style{
+    list-style: none;
+    
+
+}
+.list-style A{
+    text-decoration: none;
+    color: white;
+}
+.icons{
+    width: 40px;
+    height: 34px;
+}
+.burger-nav{
+    color: aliceblue;
+    width: 45px;
+    height: 30px;
+    position: absolute;
+    right: 72px;
+    display: none;
+}
+/*here we are going to design the portfolio part*/
+#container{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 100%;
+}
+.portfolio{
+    display: flex;
+    height: 510px;
+    border-bottom: 2px solid gray;
+}
+.img{
+    width: 50%;
+}
+.img img{
+    margin-top: 58px;
+    margin-left: 150px;
+    width: 520px;
+    height: 450px;
+}
+.information{
+    width: 50%;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.button-info{
+    align-self: center;
+    padding: 10px 20px 10px 20px;
+    border: none;
+    border-radius: 12px;
+    background-color: #106932;
+    margin-right: 202px;
+}
+.button-info a{
+    text-decoration: none;
+    color: white;
+    font-weight: 300;
+    font-size: larger;
+}
+
+.title{
+    font-weight: 800;
+    font-size: 96px;
+    color: #4B4848;
+}
+/*this is for my work part */
+#mywork{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    height: fit-content;
+
+}
+.web-part{
+    text-align: center;
+}
+.webpart{
+    font-weight: 300;
+    color:#0DEA65;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 72px;
+}
+.projects{
+    margin-top: 30px;
+    display: flex;
+    gap: 50px;
+    width: 100%;
+    border-bottom: 3px solid gray;
+    padding-bottom: 100px;
+
+}
+.project1{
+    width: 20%;
+    display: flex;
+    flex-direction: column; 
+    background-color: rgba(208, 235, 227, 0.5);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+}
+.project2{
+    width: 40%;
+    display: flex;
+    flex-direction: column; 
+    background-color: rgba(208, 235, 227, 0.5);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+}
+.project3{
+    width:20%;
+    display: flex;
+    flex-direction: column; 
+    background-color: rgba(208, 235, 227, 0.5);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+}
+.project1 img{
+    width: 209.69px;
+    height: 215.7px;
+    border-radius: 12px;
+    align-self: center;
+}
+.project2 img{
+    width: 450.74px;
+    height: 319.03px;
+    border-radius: 12px;
+    align-self: center;
+}
+.project3 img{
+    align-self: center;
+    width: 218px;
+    height: 218px;
+    border-radius: 12px;
+}
+.slides{
+    position: absolute;
+    top: 1400px;
+    margin-left: 200px;
+}
+/*this is for the design part*/
+.designtitle{
+    font-style: normal;
+font-weight: 300;
+font-size: 72px;
+line-height: 108px;
+color: #FD0E9D;
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+text-align: center;
+}
+.projects-design{
+    display: flex;
+    gap: 80px;
+    justify-content: center;
+    margin-top: 30px;
+}
+.projects-design p{
+    font-weight: 300;
+    font-size: 20px;
+    padding-left: 10px;
+
+}
+.design1{
+    background: #FFFFFF;
+    box-shadow: 1px 1px 6px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding-bottom: 18px;
+    margin-top: 12px;
+}
+.design2{
+    background: #FFFFFF;
+    box-shadow: 1px 1px 6px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding-bottom: 18px;
+    margin-top: 12px;
+}
+.design3{
+
+    background: #FFFFFF;
+    box-shadow: 1px 1px 6px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding-bottom: 18px;
+    margin-top: 12px;
+}
+.design1 img{
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+}
+.design2 img{
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+}
+.design3 img{
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+}
+
