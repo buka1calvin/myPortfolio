@@ -15,7 +15,7 @@
         grid-column: 1/5;
     }
     #nav{
-     
+        width: 100%;
         grid-column: 5/-1;
         align-items: center;
         display: flex;
@@ -55,18 +55,114 @@
     #container{
         width: 90%;
         margin: auto;
-        background-color: brown;
     }
     #container p{
         font-weight: 300;
-        width: 70%;
+        width: 100%;
     }
     .article{
         display: flex;
         flex-direction: column;
-        gap: 20px;
-        width: 100%;
+        width: 90%;
         margin: auto;
-        background-color: aliceblue;
-        padding-left: 20%;
+        color:#4B4848;
+        gap: 12px;
     }
+    .article h1{
+        color:#4B4848;
+        font-size: 45px;
+        font-weight: 300;
+        padding-bottom: 20px;
+    }
+    .article .subtitle{
+        font-size: 24px;
+    }
+    .profiling{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows:80px;
+        align-items: center;
+        grid-gap: 30px;
+    }
+    .img-2{
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        box-shadow: 1px 1px 3px 0px rgb(104, 107, 104);
+        grid-column: 1/2;
+        grid-row: 1/2;
+        background-color: #06865F;
+    }
+    .profiling div{
+        position: absolute;
+        width: 300px;
+        margin-left: 80px;
+    }
+    .profiling h3{
+        color: rgb(13, 86, 182);
+    }
+    .profiling p{
+        color:#4B4848;
+        font-weight: 200;
+    }
+    .articles p{
+        font-weight: 300;
+        font-size: 24px;
+        margin-left:;
+        width: 100%;
+    }
+    #form{
+        display: flex;
+        align-items:center;
+        gap: 32px;
+        padding:30px;
+        margin: auto;
+        background-color: rgba(9, 123, 131, 0.3);
+        border-radius: 12px;
+    }
+    #form textarea{
+        width: 300px;
+        height: 100px;
+        background-color: none;
+        border-radius: 12px;
+        border: 1px solid rgb(167, 167, 167);
+    }
+    #form div{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        position: relative;
+    }
+    input{
+        width: 200px;
+        height: 30px;
+        border: 1px solid rgb(167, 167, 167);
+        border-radius: 12px;
+    }
+#form button{
+    padding: 5px 0px 5px 0px;
+    border-radius: 12px;
+    background-color: #06865F;
+    border: none;
+    color: white;
+    font-weight: 400;
+    font-size: larger;
+}
+@media only screen and (max-width: 780px){
+    #nav ul{
+        display: none;
+    }
+    .burger-nav{
+        display: block;
+    }
+    #logo img{
+        width: 320px;
+        height: 100px;
+    }
+    #form{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+    
