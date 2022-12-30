@@ -7,9 +7,10 @@
 #main{
     display: flex;
     flex-direction: column;
-    margin: 0px 30px;
+    width:95vw;
     height:100%;
     box-shadow: 0px 2px 1px 0px gray;
+    margin: auto;
 
 }
 /*this is for the header part*/
@@ -530,7 +531,7 @@ color: #4B4848;
     #main{
         display: flex;
         flex-direction: column;
-        width: 100%;
+        width: 100vw;
         font-size: 16px;
     }
     #nav ul{
