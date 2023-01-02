@@ -20,9 +20,11 @@
     grid-template-rows: 100px;
     background-color: black;
     grid-gap: 5px;
+    max-width: 100%;
 }
 #logo{
     grid-column: 1/5;
+    width: clamp(5px,50%,100%);
 }
 #nav{
  
@@ -57,7 +59,7 @@
 }
 .burger-nav{
     color: aliceblue;
-    width: 45px;
+    width:clamp(12px,45px,45px);
     height: 30px;
     position: absolute;
     right: 72px;
@@ -135,10 +137,11 @@ p{
 #cont-image{
     grid-column: 6/9;
     grid-row: 1/2;
+    height: fit-content;
 }
 .image{
     height: 520px;
-    width: 1fr;
+    max-width: 1fr;
     position: absolute;
     right: 350px;
     top: 113px;
@@ -171,6 +174,10 @@ p{
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+.learn-more{
+    display: none;
+    position: absolute;
 }
 /*this is for the contact section*/
 #contacts{
@@ -527,14 +534,15 @@ color: #4B4848;
     text-align: center;
 }
 /*this is for the blogs part*/
-@media only screen and (max-width: 600px){
+@media only screen and (max-width:40em){
     #main{
         display: flex;
         flex-direction: column;
-        width: 100vw;
+        max-width: 100%;
         font-size: 16px;
+        font-size: clamp(13px,15px,45px);
     }
-    #nav ul{
+    #nav ul li{
         display: none;
     }
     .burger-nav{
@@ -548,8 +556,8 @@ color: #4B4848;
         margin-left: 12px;
     }
     #content{
-        padding-left: 12px;
-        height: 500px;
+        padding-left: 5px;
+        max-height: 410px;
        width: 100%; 
        display:grid;
        grid-template-columns: repeat(12,1fr);
@@ -557,22 +565,29 @@ color: #4B4848;
     }
     #designer-cont{
         position: absolute;
-        font-size: 20px;
-        margin-top: 60px;
+        font-size: clamp(13px,15px,32px);
         grid-column: 1/6;
         grid-row: 1/2;
-        width: 50%;
+        max-width: 50%;
         height: 300px;
+        font-size: ;
         padding: 10px 0 10px 0;
     }
+    #designer-cont p{
+        width: 80%;
+    }
+    #designer-cont div{
+        display: flex;
+        gap: 0px;
+ }
     .pen{
-        width: 35px;
+        max-width: 30px;
         position: relative;
-        left: 10px;
-        bottom: 10px;
+        left: 5px;
+        bottom: 7px;
     }
     #title1{
-        font-size: 20px;
+        font-size: clamp(15px,17px,45px);
     }
     #cont-image{
         grid-column: 6/-1;
@@ -583,19 +598,40 @@ color: #4B4848;
         grid-row: 2/3;
         padding: 0;
         position: absolute;
-        width: 40%;
-        height: 300px;
-        left: 345px;
-        top: 160px;
-        font-size: 20px;
+        max-width: 40%;
+        max-height: 300px;
+        top: 300px;
+        font-size:clamp(13px,15px,32px);
         z-index: -1;
+    }
+    #coder-cont p{
+        width: 99.5%;
+    }
+    .learn-more{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        color:#369813;
+        justify-content: center;
+    }
+    .learn-more p{
+        color:#369813;
+        font-weight: 700;
+        letter-spacing: 3px;
+    }
+    .learn-more img{
+        position: relative;
+        right: 20%;
     }
     .image{
         position: relative;
-        right: 220px;
-        max-width: 580px;
+        max-width:500px;
         max-height: 410px;
-        top: 90px;
+        margin-left: 200px;
+        top: 0px;
+
+        
     }
 
      .el1{
@@ -604,9 +640,11 @@ color: #4B4848;
         position: absolute;
         left: 0px;
         top: 200px;
+        display: none;
     }
     .el2{
         position: absolute;
+        display: none;
         z-index: -1;
         max-width: 280px;
         max-height: 150px;
@@ -614,9 +652,11 @@ color: #4B4848;
         left: -100px;
         filter:drop-shadow(3px 3px 3px  rgb(169, 231, 231));
     }
+    /*this is for the contacts parts*/
     #contacts{
         display: flex;
         flex-direction: column;
+        padding-top: 0;
     }
     #contacts{
         width: 100%;
@@ -625,14 +665,17 @@ color: #4B4848;
         font-size: 42px;
         font-weight: 700;
     }
+    #message{
+        width: 100%;
+        padding: 0;
+        box-shadow: none;
+    }
     .contact-icons{
         margin: 0;
         width: 100%;
         grid-row-gap: 5px;
-        grid-column-gap: 50px;
-        position: absolute;
-        margin-top: 550px;
-        padding-right: 50px;
+        grid-column-gap: 35px;
+        position: relative;
     }
     .items{
         display: none;
@@ -645,13 +688,19 @@ color: #4B4848;
     width: 45px;
 }
 #profile{
-    padding-bottom:150px ;
+    display: none;
 }
 .profile-img{
     position: relative;
     bottom: 72px;
     left: 30px;
     max-width: 600px;
+    }
+    #form button{
+        position: relative;
+        right: 70px;
+        padding: 5px 45px;
+        border-radius: 0px;
     }
     /*this is about the about section*/
     #about-me{
@@ -668,43 +717,57 @@ color: #4B4848;
 
     }
     .about h1{
+        width: 200px;
         font-size: 32px;
     }
     .about h3{
-        font-size: 15px;
+        font-size: clamp(13px,15px,45px);
+        width: 100vw;
+        color: #4B4848;
     }
     .about p{
-        width: 100%;
+        width: 95%;
     }
     .profile{
         width: 50%;
 
     }
     .profile img{
-        top: 10px;
-        left: -60px;
-        width: 350px;
+        top: 90px;
+        left: -70px;
+        max-width: 300px;
+        max-height: 190px;
+        position: relative;
+        
     }
     #my-Performance{
         width: 100%;
         display: flex;
         flex-direction: column;
+        font-size: (13px,15px,30px);
     }
     .design-part{
-
+        padding: 25px 0px 0px 15px;
     }
     .chart{
         width: 100%;
         height: 300px;
+        position: relative;
     }
     .chart img{
-        position: absolute;
+        max-width: 100px;
+        height: 100px;
+    }
+    .coding-part{
+        width: 100%;
+        padding: 25px 0px 0px 15px;
+        font-size: (13px,15px,30px);
     }
     .skill-set{
-        width: 100%;
+        max-width: 100%;
     }
     .skill-set img{
-        width: 400px;
+        max-width: 300px;
     }
     /*this is about the blog section*/
     #blogs{
@@ -719,16 +782,30 @@ color: #4B4848;
         display: flex;
         flex-direction: column;
     }
+    .icony{
+        position: relative;
+        right: 30%;
+        top: 10px;
+    }
     .more{
         position: relative;
-        left: 200px;
         width: 50px;
         margin: 20px;
+        left: 140px;
+    }
+    #footer{
+        display: flex;
+        flex-direction:column-reverse;
+        gap: 10px;
+        padding: 20px;
+        justify-content: center;
+        text-align: center;
+    }
+    #footer p{
+        margin-right: 40px;
+        width: fit-content;
     }
 
 
 }
-
-
-
 
