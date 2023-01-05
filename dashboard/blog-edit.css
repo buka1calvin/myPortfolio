@@ -1,0 +1,142 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(13px,normal,24px);
+}
+main{
+    background-color: #0C0A0A;
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+#nav{
+    height: 10%;
+    padding: 10px 30px 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logout{
+    padding: 5px 10px 5px 10px;
+    font-size: 16px;
+    color: white;
+    background-color: rgb(21, 145, 4);
+    border-radius: 12px;
+    border: none;
+}
+/*this is for the form part*/
+section{
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    background-color: #06865F;
+    justify-content: center;
+    gap: 12px;
+    width: 40%;
+    height: 60%;
+    padding: 20px 20px 20px 40px;
+    border-radius: 12px;
+}
+.input{
+    display: flex;
+    flex-direction: column;
+}
+input[type="text"]{
+    width: 80%;
+}
+textarea{
+    width: 80%;
+}
+.buttons{
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+button[name="upload"]{
+    background-color: #0C0A0A;
+    padding: 10px;
+    color: white;
+    border: none;
+}
+button[type="reset"]{
+    background-color: #330606;
+    padding: 10px;
+    color: white;
+    border: none;
+}
+/*this is for the footer information part*/
+#footer{
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    background-color: #06865F;
+    align-items: center;
+    color: white;
+}
+#footer ul{
+    display: flex;
+    padding-right: 30px;
+    gap: 12px;
+}
+#footer li{
+    list-style: none;
+}
+#footer p{
+    color: white;
+    margin-left: 20px;
+    text-align: center;
+}
+@media only screen and (min-width:500px;){
+    #nav img{ 
+        width: 60%;
+    }
+    .form{
+        width: 90%;
+    }
+    #footer{
+        display: flex;
+        flex-direction:column-reverse;
+        gap: 10px;
+        padding: 20px;
+        justify-content: center;
+        text-align: center;
+    }
+    #footer p{
+        margin-right: 40px;
+        width: fit-content;
+    }
+
+}
+@media only screen and (max-width:500px){
+    #nav img{ 
+        width: 60%;
+    }
+    .form{
+        width: 90%;
+    }
+    #footer{
+        display: flex;
+        flex-direction:column-reverse;
+        gap: 10px;
+        padding: 20px;
+        justify-content: center;
+        text-align: center;
+    }
+    #footer p{
+        margin-right: 40px;
+        width: fit-content;
+    }
+
+}
+
+
+

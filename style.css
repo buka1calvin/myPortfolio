@@ -534,7 +534,7 @@ color: #4B4848;
     text-align: center;
 }
 /*this is for the blogs part*/
-@media only screen and (max-width:40em){
+@media only screen and (max-width:735px){
     #main{
         display: flex;
         flex-direction: column;
@@ -570,7 +570,281 @@ color: #4B4848;
         grid-row: 1/2;
         max-width: 50%;
         height: 300px;
-        font-size: ;
+        padding: 10px 0 10px 0;
+    }
+    #designer-cont p{
+        width: 80%;
+    }
+    #designer-cont div{
+        display: flex;
+        gap: 0px;
+ }
+    .pen{
+        max-width: 30px;
+        position: relative;
+        left: 5px;
+        bottom: 7px;
+    }
+    #title1{
+        font-size: clamp(15px,17px,45px);
+    }
+    #cont-image{
+        grid-column: 6/-1;
+        grid-row: 1/3;
+    }
+    #coder-cont{
+        grid-column: 1/6;
+        grid-row: 2/3;
+        padding: 0;
+        position: absolute;
+        max-width: 40%;
+        max-height: 300px;
+        top: 300px;
+        font-size:clamp(13px,15px,32px);
+        z-index: -1;
+    }
+    #coder-cont p{
+        width: 99.5%;
+    }
+    .learn-more{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        color:#369813;
+        justify-content: center;
+    }
+    .learn-more p{
+        color:#369813;
+        font-weight: 700;
+        letter-spacing: 3px;
+    }
+    .learn-more img{
+        position: relative;
+        right: 20%;
+    }
+    .image{
+        position: relative;
+        max-width:490px;
+        max-height: 410px;
+        margin-left: 200px;
+        top: 0px;
+
+        
+    }
+
+     .el1{
+        max-width: 300px;
+        max-height: 205px;
+        position: absolute;
+        left: 0px;
+        top: 200px;
+        display: none;
+    }
+    .el2{
+        position: absolute;
+        display: none;
+        z-index: -1;
+        max-width: 280px;
+        max-height: 150px;
+        top:200px;
+        left: -100px;
+        filter:drop-shadow(3px 3px 3px  rgb(169, 231, 231));
+    }
+    /*this is for the contacts parts*/
+    #contacts{
+        display: flex;
+        flex-direction: column;
+        padding-top: 0;
+    }
+    #contacts{
+        width: 100%;
+    }
+    #data h1{
+        font-size: 42px;
+        font-weight: 700;
+    }
+    #message{
+        width: 100%;
+        padding: 0;
+        box-shadow: none;
+    }
+    .contact-icons{
+        margin: 0;
+        width: 100%;
+        grid-row-gap: 5px;
+        grid-column-gap: 35px;
+        position: relative;
+    }
+    .items{
+        display: none;
+        position: absolute;
+    }
+.itms p{
+    font-size: 15px;
+}
+.itms img{
+    width: 45px;
+}
+#profile{
+    display: none;
+}
+.profile-img{
+    position: relative;
+    bottom: 72px;
+    left: 30px;
+    max-width: 600px;
+    }
+    #form button{
+        position: relative;
+        right: 70px;
+        padding: 5px 45px;
+        border-radius: 0px;
+    }
+    /*this is about the about section*/
+    #about-me{
+        width: 100%;
+        padding: 0;
+    }
+    .about-cont{
+        display: flex;
+    }
+    .about{
+        padding: 0;
+        width:50%;
+        padding-left: 10px;
+
+    }
+    .about h1{
+        width: 200px;
+        font-size: 32px;
+    }
+    .about h3{
+        font-size: clamp(13px,15px,45px);
+        width: 100vw;
+        color: #4B4848;
+    }
+    .about p{
+        width: 95%;
+    }
+    .profile{
+        width: 50%;
+
+    }
+    .profile img{
+        top: 90px;
+        left: -70px;
+        max-width: 300px;
+        max-height: 190px;
+        position: relative;
+        
+    }
+    #my-Performance{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        font-size: (13px,15px,30px);
+    }
+    .design-part{
+        padding: 25px 0px 0px 15px;
+    }
+    .chart{
+        width: 100%;
+        height: 300px;
+        position: relative;
+    }
+    .chart img{
+        max-width: 200px;
+        height: 100px;
+        position: relative;
+        left: 100px;
+    }
+    .coding-part{
+        width: 100%;
+        padding: 25px 0px 0px 15px;
+        font-size: (13px,15px,30px);
+    }
+    .skill-set{
+        max-width: 100%;
+    }
+    .skill-set img{
+        max-width: 300px;
+    }
+    /*this is about the blog section*/
+    #blogs{
+        width: 100%;
+        padding: 0;
+    }
+    #blogs h1{
+        font-size: 36px;
+        text-align: center;
+    }
+    #group{
+        display: flex;
+        flex-direction: column;
+    }
+    .icony{
+        position: relative;
+        right: 30%;
+        top: 10px;
+    }
+    .more{
+        position: relative;
+        width: 50px;
+        margin: 20px;
+        left: 140px;
+    }
+    #footer{
+        display: flex;
+        flex-direction:column-reverse;
+        gap: 10px;
+        padding: 20px;
+        justify-content: center;
+        text-align: center;
+    }
+    #footer p{
+        margin-right: 40px;
+        width: fit-content;
+    }
+
+
+}
+@media only screen and(max-width:1280px){
+    #main{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        font-size: 16px;
+        font-size: clamp(13px,15px,45px);
+    }
+    #nav ul li{
+        display: none;
+    }
+    .burger-nav{
+        display: block;
+        position: relative;
+        left: 0px;
+    }
+    #logo img{
+        width: 200px;
+        margin-top: 30px;
+        margin-left: 12px;
+    }
+    #content{
+        padding-left: 5px;
+        max-height: 410px;
+       width: 100%; 
+       display:grid;
+       grid-template-columns: repeat(12,1fr);
+       grid-template-rows: repeat(2,250px);
+    }
+    #designer-cont{
+        position: absolute;
+        font-size: clamp(13px,15px,32px);
+        grid-column: 1/6;
+        grid-row: 1/2;
+        max-width: 50%;
+        height: 300px;
         padding: 10px 0 10px 0;
     }
     #designer-cont p{

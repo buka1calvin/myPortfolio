@@ -75,8 +75,8 @@
 .img img{
     margin-top: 58px;
     margin-left: 150px;
-    width: 520px;
-    height: 450px;
+    max-width: 520px;
+    max-height: 450px;
 }
 .information{
     width: 50%;
@@ -131,6 +131,9 @@
     padding-bottom: 100px;
 
 }
+.projects img{
+    max-width: 5%;
+}
 .project1{
     width: 20%;
     display: flex;
@@ -168,8 +171,8 @@
     align-self: center;
 }
 .project2 img{
-    width: 450.74px;
-    height: 319.03px;
+    max-width: 450.74px;
+    max-height: 319.03px;
     border-radius: 12px;
     align-self: center;
 }
@@ -242,5 +245,194 @@ text-align: center;
     width: 300px;
     height: 200px;
     border-radius: 10px;
+}
+#footer{
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    background-color: #06865F;
+    align-items: center;
+    color: white;
+}
+#footer ul{
+    display: flex;
+    padding-right: 30px;
+    gap: 12px;
+}
+#footer p{
+    color: white;
+    margin-left: 20px;
+    text-align: center;
+}
+@media only screen and (max-width:730px){
+    #container{
+        padding: 0;
+        max-width: 100%;
+    }
+    #nav ul{
+        display: none;
+    }
+    .burger-nav{
+        max-width: 30px;
+        display: block;
+        position: relative;
+        left: -20px;
+    }
+    #logo img{
+        max-width: clamp(250px,250px,320px);
+        height: 100px;
+    }
+    .portfolio{
+        margin-top: 12px;
+        max-height: fit-content;
+        display: flex;
+        flex-direction:column-reverse;
+        align-items: center;
+        gap: 12px;
+    }
+    .information{
+        padding: 0;
+        width: 90%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+
+    }
+    .button-info{
+        align-self: center;
+        width: 150px;
+        margin-left: 170px;
+    }
+    .img{
+        width: 90%;
+        height: 50%;
+        z-index: -1;
+        
+        
+    }
+    .img img{
+        max-width: 80%;
+        height: 80%;
+        position: relative;
+        right: 100px;
+        bottom: 7px;
+        }
+    .title{
+        font-size: clamp(15px,2rem,3rem);
+    }
+    .information h3{
+        font-size: clamp(13px,16px,32px);
+    }
+    /*this is for the web part*/
+    .webpart{
+        font-size: clamp(15px,30px,32px);
+        letter-spacing: 12px;
+        text-align: center;
+    }
+    .projects{
+        display: flex;
+        width: 100%;
+        height: 50%;
+        flex-direction: column;
+    }
+    .project1{
+        display: none;
+        position: absolute;
+        width: 0%;
+    }
+    .project3{
+        display: none;
+        width: 0%;
+        position: absolute;
+    }
+
+    .project2{
+        width:  100%;
+        display: flex;
+        flex-direction: column; 
+        background-color: rgba(208, 235, 227, 0.5);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        text-align: left;
+
+    }
+    .project2 img{
+        max-width: 100%;
+    }
+    .slides {
+        height: 20%;
+        position: relative;
+        max-width:100px;
+        display: flex;
+        top: 0;
+        margin-left: 0;
+        gap:12px;
+    }
+    .img-1{
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        bottom: 20px;
+    }
+    .img-2{
+        width: 120px;
+        height: 50px;
+        position: absolute;
+        left: 70px;
+        bottom: 20px;
+    }
+    .img-3{
+        width: 70px;
+        height: 50px;
+        position: absolute;
+        left: 200px;
+        bottom: 20px;
+    }
+     .back{
+        position: absolute;
+        margin-top: 90px;
+        right: clamp(340px,330px,350px);
+    }
+    .forward{
+        position: absolute;
+        margin-top: 90px;
+        left: clamp(340px,330px,350px);
+    }
+    /*this is for the design part*/
+    .designtitle{
+        font-size: clamp(15px,30px,32px);
+        text-align: center;
+    }
+    .projects-design{
+        display: flex;
+        flex-direction: column;
+    }
+    .projects-design div{
+        width: 100%;
+    }
+    .design1 img{
+        width: 100%;
+    }
+    .design2 img{
+        width: 100%;
+    }
+    .design3 img{
+        width: 100%;
+    }
+    #footer{
+        display: flex;
+        flex-direction:column-reverse;
+        gap: 10px;
+        padding: 20px;
+        justify-content: center;
+        text-align: center;
+    }
+    #footer p{
+        margin-right: 40px;
+        width: fit-content;
+    }
+
+
+
 }
 

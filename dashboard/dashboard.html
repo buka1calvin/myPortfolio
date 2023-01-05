@@ -4,68 +4,153 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="dashboard.css"> 
+    <link rel="stylesheet" href="dashbord.css"> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;0,1000;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Poppins:ital,wght@0,100;0,300;0,500;0,700;1,100;1,400&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
-    <main class="main">
-        <section class="elements">
-            <img class="logo"src="/Group 3.svg" alt="">
+    <main id="main">
+        <nav id="nav">
+            <img src="/dash-logooo.svg" alt="">
+    <button class="logout"type="submit"><a class="a"href="/signup.html">Log out</a></button>
+        </nav>
+        <section id="dashboard-check">
             <div class="profiling">
-                <img class="img-2"src="/profile.JPG" alt="">
+                <img src="/profile.JPG"alt="">
                 <div>
-                <h3>@Bukarani </h3>
-                <p>6 December 2022</p>
-            </div>
-            <h3>Dashboard</h3>
-            <dv class="blog-update">
-            <h3>blog Update</h3>
-            <p>UI design books you should read in 2022 <span>></span></p>
-            <p>Best web hosting for designers<span>></span></p>
-            <button type="submit"class="btn-1">Add+</button>
-        </dv>
-        <div class="projects-update">
-            <h3>blog Update</h3>
-            <p>UI design books you should read in 2022 <span>></span></p>
-            <p>Best web hosting for designers<span>></span></p>
-            <button type="submit"class="btn-1">Add+</button>
-        </div>
-        </section>
-        <section class="dashboard">
-            <img src="/dash-logo.svg" alt="">
-            <div class="group-boxes">
-                <div class="box1">
-                    <img src="/clients.svg" alt="">
-                    <h3>clients Total:</h3>
-                    <p>6+ clients</p>
-                    <p>increased by 4%</p>
-                </div>
-                <div class="box2">
-                    <img src="/visitors.svg" alt="">
-                    <h3>visitors Total:</h3>
-                    <p>7+ visitors/p>
-                    <p>increased by 6%</p>
-                </div>
-                <div class="box3">
-                    <img src="/review.svg" alt="">
-                    <h3>Reviews Total:</h3>
-                    <p>15+ Reviews/p>
-                    <p>increased by 22%</p>
+                    <h3>@Me</h3>
+                    <p>project Manager</p>
                 </div>
             </div>
-            <div>
+            <div class="dash">
+                <h1>Dashboard</h1>
+                <nav class="nav-dash">
                 <ul>
-                    <li>Names</li>
-                    <li>Email</li>
-                    <li>userType</li>
-                    <li>Date</li>
-                    <li>request</li>
+                    <li><a href="#manBlogs">Manage Blogs</a></li>
+                    <li><a href="#manQuerry">Manage Querries</a></li>
+                    <li><a href="#manUser">Manage Users</a></li>
                 </ul>
+            </nav>
+            </div>
+        </section>
+        <section id="main-dash">
+            <!--this is for the high light div-->
+            <div class="highlight"id="manBlogs">
+                <img src="/dash-logo.svg" alt="">
+                <div class="group">
+                    <div class="els el-1">
+                        <img src="/clients.svg"alt="">
+                        <div>
+                            <h3>clients Total:</h3>
+                            <p>6+ clients</p>
+                        </div>
+                        <p>increased by 4%</p>
+                    </div>
+                    <div class="els el-2">
+                        <img src="/visitors.svg"alt="">
+                        <div>
+                            <h3>Total visitors:</h3>
+                            <p>7 +clients</p>
+                        </div>
+                        <p>increased by 6%</p>
+                    </div>
+                    <div class="els el-3">
+                        <img src="/review.svg"alt="">
+                        <div>
+                            <h3>Total Reviews:</h3>
+                            <p>15+ reviews</p>
+                        </div>
+                        <p>increased by 22%</p>
+                    </div>
+                </div>
+            </div>
+            <!--this is the table part-->
+            <div  class="manager"id="dashdash">
+                <h1>Blogs Update</h1>
+                <table>
+
+                    <tr>
+                        <td>1</td>
+                        <td>UI design books you should read in 2022</td>
+                        <td>05 feb 2022</td>
+                        <td>5 views</td>
+                        <td><img class="heart"src="/heart 2.svg" alt=""> 2 likes</td>
+                        <td>3 Comments</td>
+                        <td><button type="submit" class="edit">Edit Blog</button></td>
+                        <td><button type="submit" class="delete">Delete Blog</button></td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td>2</td>
+                        <td>Best web hosting for designers</td>
+                        <td>05 feb 2022</td>
+                        <td>5 views</td>
+                        <td><img class="heart"src="/heart 2.svg" alt=""> 2 likes</td>
+                        <td>3 Comments</td>
+                        <td><button class="edit"type="submit">Edit Blog</button></td>
+                        <td><button class="delete"type="submit">Delete Blog</button></td>
+                    </tr>
+                </table>
+            </div>
+            <div id="manQuerry"class="manager">
+                <img src="/dash-logo.svg" alt="">
+                <h1>QUERRY MANAGEMENT</h1>
+                <table>
+
+                    <tr>
+                        <td>1</td>
+                        <td>05 feb 2022</td>
+                        <td>ishimwe homere</td>
+                        <td>078364548</td>
+                        <td>ishimwehomizzo@gmail.com</td>
+                        <td><button type="submit" class="edit">contact arthor</button></td>
+                        <td><button type="submit" class="delete">delete query</button></td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td>2</td>
+                        <td>05 feb 2022</td>
+                        <td>ishimwe homere</td>
+                        <td>078364548</td>
+                        <td>ishimwehomizzo@gmail.com</td>
+                        <td><button class="edit"type="submit">contact arthor</button></td>
+                        <td><button class="delete"type="submit">delete query</button></td>
+                    </tr>
+                </table>
+            </div>
+            <div id="manUser"class="manager">
+                <img src="/dash-logo.svg" alt="">
+                <h1>USER MANAGEMENT</h1>
+                <table>
+
+                    <tr>
+                        <td>1</td>
+                        <td>ndayisabye SALIM</td>
+                        <td>078364548</td>
+                        <td>ishimwehomizzo@gmail.com</td>
+                        <td><img class="heart2"src="/article.svg" alt=""> 3 Articles</td>
+                        <td><button type="submit" class="edit">contact arthor</button></td>
+                        <td><button type="submit" class="delete">delete query</button></td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td>2</td>
+                        <td>ISHIMWE Homere</td>
+                        <td>078364548</td>
+                        <td>ishimwehomizzo@gmail.com</td>
+                        <td><img class="heart2"src="/article.svg" alt=""> 3 Articles</td>
+                        <td><button class="edit"type="submit">contact arthor</button></td>
+                        <td><button class="delete"type="submit">delete query</button></td>
+                    </tr>
+                </table>
             </div>
         </section>
     </main>
+       
 </body>
 </html>
