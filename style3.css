@@ -127,8 +127,7 @@
     display: flex;
     gap: 50px;
     width: 100%;
-    border-bottom: 3px solid gray;
-    padding-bottom: 100px;
+    padding-bottom: 20px;
 
 }
 .projects img{
@@ -165,7 +164,7 @@
     text-align: left;
 }
 .project1 img{
-    width: 209.69px;
+    max-width: 209.69px;
     height: 215.7px;
     border-radius: 12px;
     align-self: center;
@@ -178,14 +177,13 @@
 }
 .project3 img{
     align-self: center;
-    width: 218px;
+    max-width: 300px;
     height: 218px;
     border-radius: 12px;
+
 }
 .slides{
-    position: absolute;
-    top: 1400px;
-    margin-left: 200px;
+    position: relative;
 }
 /*this is for the design part*/
 .designtitle{
@@ -264,7 +262,10 @@ text-align: center;
     margin-left: 20px;
     text-align: center;
 }
-@media only screen and (max-width:730px){
+@media only screen and (max-width:640px){
+    #main{
+        max-width: 100%;
+    }
     #container{
         padding: 0;
         max-width: 100%;
@@ -292,7 +293,7 @@ text-align: center;
     }
     .information{
         padding: 0;
-        width: 90%;
+        width: 100%;
         height: 50%;
         display: flex;
         flex-direction: column;
@@ -324,16 +325,22 @@ text-align: center;
         font-size: clamp(13px,16px,32px);
     }
     /*this is for the web part*/
+    #mywork{
+        width: 1005;
+    }
     .webpart{
         font-size: clamp(15px,30px,32px);
         letter-spacing: 12px;
         text-align: center;
+        display: flex;
+        flex-direction: column;
     }
     .projects{
         display: flex;
         width: 100%;
         height: 50%;
-        flex-direction: column;
+        align-items: center;
+        gap: 10px;
     }
     .project1{
         display: none;
@@ -359,14 +366,16 @@ text-align: center;
     .project2 img{
         max-width: 100%;
     }
-    .slides {
-        height: 20%;
+    .slides{
         position: relative;
-        max-width:100px;
+        top: 60px;
+        max-width:100%;
         display: flex;
-        top: 0;
-        margin-left: 0;
         gap:12px;
+        align-self: center;
+        justify-self: center;
+        margin: auto;
+
     }
     .img-1{
         width: 50px;
@@ -389,14 +398,12 @@ text-align: center;
         bottom: 20px;
     }
      .back{
-        position: absolute;
-        margin-top: 90px;
-        right: clamp(340px,330px,350px);
+        margin-top: 30px;
+        
     }
     .forward{
-        position: absolute;
-        margin-top: 90px;
-        left: clamp(340px,330px,350px);
+        
+        margin-top: 30px;
     }
     /*this is for the design part*/
     .designtitle{
@@ -433,6 +440,187 @@ text-align: center;
     }
 
 
+
+}
+@media screen and (min-device-width: 768px)
+and (max-device-width: 1024px){
+    #main{
+    max-width: 100%;
+    }
+    #container{
+        padding: 0;
+        max-width: 90%;
+    }
+    #nav ul{
+        display: none;
+    }
+    .burger-nav{
+        max-width: 30px;
+        display: block;
+        position: relative;
+        left: -20px;
+    }
+    #logo img{
+        max-width: clamp(250px,250px,320px);
+        height: 100px;
+    }
+    .portfolio{
+        margin-top: 0px;
+        height: fit-content;
+        gap: 12px;
+    }
+    .information{
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+
+    }
+    .button-info{
+        align-self: center;
+        width: 150px;
+        margin-left: 170px;
+        margin-bottom: 12px;
+    }
+    .img{
+        width: 90%;
+        height: 100%;
+        z-index: -1;
+        
+        
+    }
+    .img img{
+        max-width: 80%;
+        height: 300px;
+        position: relative;
+        right: 100px;
+        top:10px
+        }
+    .title{
+        font-size: clamp(15px,2rem,3rem);
+    }
+    .information h3{
+        font-size: clamp(13px,16px,32px);
+    }
+    /*this is for the web part*/
+    #mywork{
+        width: 1005;
+    }
+    .webpart{
+        font-size: clamp(15px,30px,32px);
+        letter-spacing: 12px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .projects{
+        display: flex;
+        width: 100%;
+        height: 50%;
+        align-items: center;
+        gap: 10px;
+    }
+    .project1{
+        display: none;
+        position: absolute;
+        width: 0%;
+    }
+    .project3{
+        display: none;
+        width: 0%;
+        position: absolute;
+    }
+
+    .project2{
+        width:  100%;
+        display: flex;
+        flex-direction: column; 
+        background-color: rgba(208, 235, 227, 0.5);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        text-align: left;
+
+    }
+    .project2 img{
+        max-width: 100%;
+    }
+    .slides{
+        position: relative;
+        top: 60px;
+        max-width:100%;
+        display: flex;
+        gap:12px;
+        align-self: center;
+        justify-self: center;
+        margin-left: 200px;
+
+    }
+    .img-1{
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        bottom: 20px;
+    }
+    .img-2{
+        width: 120px;
+        height: 50px;
+        position: absolute;
+        left: 70px;
+        bottom: 20px;
+    }
+    .img-3{
+        width: 70px;
+        height: 50px;
+        position: absolute;
+        left: 200px;
+        bottom: 20px;
+    }
+     .back{
+        margin-top: 30px;
+        
+    }
+    .forward{
+        
+        margin-top: 30px;
+    }
+    /*this is for the design part*/
+    .designtitle{
+        font-size: clamp(15px,30px,32px);
+        text-align: center;
+    }
+    .projects-design{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 12px;
+    }
+    .projects-design div{
+        width: 90%;
+        height: 250px;
+
+        
+    }
+    .design1 img{
+        width: 100%;
+    }
+    .design2 img{
+        width: 100%;
+    }
+    .design3 img{
+        width: 100%;
+    }
+    #footer{
+        display: flex;
+        flex-direction:column-reverse;
+        gap: 10px;
+        padding: 20px;
+        justify-content: center;
+        text-align: center;
+    }
+    #footer p{
+        margin-right: 40px;
+        width: fit-content;
+    }
 
 }
 
