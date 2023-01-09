@@ -165,6 +165,10 @@
 #footer li{
     list-style: none;
 }
+#footer a{
+    color: white;
+    
+}
 #footer p{
     color: white;
     margin-left: 20px;
