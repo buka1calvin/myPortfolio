@@ -10,6 +10,7 @@
     height:100%;
     box-shadow: 0px 2px 1px 0px gray;
     margin: auto;
+    overflow: hidden;
 
 }
 /*this is for the header part*/
@@ -19,7 +20,19 @@
     grid-template-rows: 100px;
     background-color: black;
     grid-gap: 5px;
-    max-width: 100%;
+    width: 96.2%;
+    position: fixed;
+    right: 25px;
+    margin: auto;
+    z-index: 2;
+    animation-name: header;
+    animation-duration: 2s;
+}
+@keyframes header{
+    0%{
+        position: relative;
+        top: -100px;
+    }
 }
 #logo{
     grid-column: 1/5;
@@ -64,15 +77,19 @@
     right: 72px;
     display: none;
 }
+#nav a:hover{
+    color: #318a6f;
+}
 /*this is where im going to organize and display the home body*/
 #content{
     display: grid;
     grid-template-columns: repeat(12,1fr);
     grid-template-rows: 500px;
     width: 100%;
-    height: 85vh;
+    height: 100vh;
     margin: auto;
     box-shadow: 0px 2px 2px 0px rgb(206, 197, 197);
+    padding-top: 90px;
 
     
 }
@@ -83,6 +100,26 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    animation-name: design;
+    animation-duration: 2s;
+}
+@keyframes design{
+    0%{
+        position: relative;
+        left: -1000px;
+        font-size: 12px;
+        width: 200px;
+        padding: 0;
+    }
+
+    100%{
+        grid-column: 1/6;
+    grid-row: 1/2;
+    padding: 80px 10px 0 30px ;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    }
 }
 
 #designer-cont div{
@@ -128,6 +165,8 @@
     font-size: 40px;
     color: #4B4848;
     font-weight: bolder;
+    animation-name: design;
+    animation-duration: 2s;
 }
 p{
     font-weight:300;
@@ -137,14 +176,21 @@ p{
     grid-column: 6/9;
     grid-row: 1/2;
     height: fit-content;
+    
 }
 .image{
     height: 520px;
     max-width: 1fr;
     position: absolute;
     right: 350px;
-    top: 113px;
-
+    top: 107px;
+    animation-name: image;
+    animation-duration: 5s;
+}
+@keyframes image{
+    0%{
+        width: 0;
+    }
 }
 .el1{
     height: 250px;
@@ -153,6 +199,14 @@ p{
     top: 320px;
     left: 300px;
     opacity: 0.5;
+    animation-name: comp;
+    animation-duration: 2s;
+}
+@keyframes comp{
+    0%{
+        width: 50px;
+        height: 50px;
+    }
 }
 .el2{
     height: 250px;
@@ -162,7 +216,7 @@ p{
     height: 250px;
     width: 600px;
     position: absolute;
-    top: 382px;
+    top: 376px;
     right: 850px;
     opacity: 0.5;
 }
@@ -173,10 +227,48 @@ p{
     display: flex;
     flex-direction: column;
     gap: 10px;
+    animation-name: coding;
+    animation-duration: 2s;
+}
+@keyframes coding{
+    0%{
+        position: relative;
+        right: -1000px;
+        font-size: 12px;
+        width: 200px;
+        padding: 0;
+    }
+
+    100%{
+    grid-column: 9/-1;
+    grid-row: 1/2;
+    padding: 80px 20px 0 20px ;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    }
 }
 .learn-more{
     display: none;
     position: absolute;
+    animation-name:learn;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes learn{
+    0%{
+        position: relative;
+        top: -5px;
+    }
+    50%{
+        position: relative;
+        top: -1px;
+    }
+    0%{
+        position: relative;
+        top: 0px;
+    }
 }
 #coder-cont a{
     text-decoration: none;
@@ -187,10 +279,12 @@ p{
     grid-template-columns: repeat(12,1fr);
     height: 100%;
     grid-row: repeat(3,1fr);
+    overflow: hidden;
 }
 
 #profile{
    grid-column: 6/-1;
+   margin-top: 50px;
 }
 .profile-img{
     width: 600px;
@@ -205,12 +299,16 @@ p{
     padding-top: 100px;
     display: flex;
     flex-direction: column;
+
 }
+
+
 #data h1{
     font-weight: 800;
     font-size: 72px;
     color: #4B4848;
     margin-left: -35px;
+    margin-top: 50px;
 }
 .pp{
     margin-left: -35px;
@@ -248,6 +346,10 @@ p{
     height: 60px;
     grid-column: 6/-1;
     grid-row: 2/3;
+}
+.itms{
+    display: flex;
+    align-items: center;
 }
 .itms a{
     text-decoration: none;
@@ -301,8 +403,6 @@ p{
 }
 #form{
     display: flex;
-
-    
 }
 .input1{
     width: 50%;
@@ -321,6 +421,21 @@ p{
     gap: 12px;
     font-size: 24px;
     font-weight: 300;
+}
+.items{
+    animation-name: items;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes items{
+    0%{
+       width: 5%;
+    }
+     50%{
+       width: 0%;
+    }
+
 }
 #form input{
     height: 42px;
@@ -346,6 +461,9 @@ p{
     font-size: 14px;
     font-weight: 300;
 }
+#form button:hover{
+    padding:15px 35px 15px 35px; ;
+}
 /*this is the about section */
 #about-me{
     margin-top: 12px;
@@ -357,7 +475,7 @@ p{
 }
 .about-cont{
     display: flex;
-    padding-top: 30px;
+    padding-top: 100px;
 }
 .about{
     padding-left: 60px;
@@ -443,7 +561,7 @@ list-style: none;
 }
 #blogs{
     margin-top: 12px;
-    padding: 30px 0px 0px 100px;
+    padding: 80px 0px 0px 100px;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -524,6 +642,23 @@ color: #4B4848;
 .more{
     align-self: center;
     margin-right: 100px;
+    animation-name: more;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes more{
+    0%{
+        position: relative;
+        top: -5px;
+    }
+    50%{
+        position: relative;
+        top: -2px;
+    }
+    0%{
+        position: relative;
+        top: 0px;
+    }
 }
 #footer{
     display: flex;
@@ -551,30 +686,71 @@ color: #4B4848;
 }
 /*this is for the blogs part*/
 @media only screen and (max-width:640px){
+    body{
+        width: 100vw;
+        overflow-x: hidden;
+    }
     #main{
         display: flex;
         flex-direction: column;
-        max-width:98%;
+        width:100%;
         font-size: 16px;
         font-size: clamp(13px,15px,45px);
     }
-
-    #nav ul li{
-        display: none;
+    #header{
+        width: 100vw;
+        margin: auto;
+        left: 0px;
+    }
+    #nav .list-style {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(0, 0, 0);
+        width:100vw;  
+        height: 70vh;
+        z-index:1;
+        left: 0px;
+        top: 20px;
+        bottom: 200px;
+        transition: 0.5s;
+        overflow: hidden;
+        display: flex;
+    }
+  .active{
+        opacity: 0;
+    }
+    #nav a{
+        color: #06865F;
+        transition: 0.2s;
+    }
+    #nav a:hover{
+        color: aliceblue;
+        transition: 0.2s;
+    }
+    #logo{
+        z-index: 2;
+        cursor: pointer;
     }
     .burger-nav{
         display: block;
         position: relative;
         left: 0px;
+        z-index: 2;
+        cursor: pointer;
     }
     #logo img{
         width: 200px;
         margin-top: 30px;
         margin-left: 12px;
     }
+    #nav li img{
+        display: none;
+    }
     #content{
+        padding-top: 40px;
         padding-left: 5px;
-        max-height: 410px;
+        max-height: 520px;
        width: 100%; 
        display:grid;
        grid-template-columns: repeat(12,1fr);
@@ -588,6 +764,15 @@ color: #4B4848;
         max-width: 50%;
         height: 300px;
         padding: 10px 0 10px 0;
+        animation-name: buka;
+        animation-duration: 1s;
+        margin-top: 60px;
+    }
+    @keyframes buka {
+        0%{
+            position: relative;
+            left: -100px;
+        }
     }
     #designer-cont p{
         width: 80%;
@@ -619,6 +804,7 @@ color: #4B4848;
         top: 300px;
         font-size:clamp(13px,15px,32px);
         z-index: -1;
+        animation: none;
     }
     #coder-cont p{
         width: 99.5%;
@@ -629,23 +815,22 @@ color: #4B4848;
         align-items: center;
         position: relative;
         color:#369813;
-        justify-content: center;
     }
-    .learn-more p{
+    .learn-more a{
         color:#369813;
         font-weight: 700;
         letter-spacing: 3px;
     }
     .learn-more img{
         position: relative;
-        right: 20%;
+        right: 3%;
     }
     .image{
         position: relative;
         max-width:490px;
         max-height: 410px;
         margin-left: 200px;
-        top: 0px;
+        top: 70px;
 
         
     }
@@ -673,9 +858,11 @@ color: #4B4848;
         display: flex;
         flex-direction: column;
         padding-top: 0;
+
     }
     #contacts{
         width: 100%;
+        padding-top: 0;
     }
     #data h1{
         font-size: 42px;
@@ -831,11 +1018,14 @@ and (max-device-width: 1024px){
     #main{
         display: flex;
         flex-direction: column;
-    width: 95%;
+        width: 100%;
         font-size: 16px;
         font-size: clamp(13px,15px,45px);
     }
-
+    #header{
+        width: 100%;
+        left: 0px;
+    }
     #nav ul li{
         display: none;
     }
@@ -848,11 +1038,15 @@ and (max-device-width: 1024px){
 
     }
     #content{
-        height: fit-content;
+        height: 710px;
+        width: 100%;
     }
     #designer-cont{
-        font-size: clamp(13px,30px,32px);
-        width: 100%;
+        font-size: clamp(13px,25px,32px);
+        width: 90%;
+        margin-left: 10px;
+        padding-left: 0;
+        margin-top: 20px;
         
     }
     #title1{
@@ -866,13 +1060,16 @@ and (max-device-width: 1024px){
         bottom: 2px;
     }
     #coder-cont{
+        margin-top: 20px;
         max-height: 300px;
         top: 300px;
-        font-size:clamp(13px,30px,32px);
+        font-size:clamp(13px,25px,32px);
         z-index: -1;
+        margin-left: 40px;
     }
     #coder-cont p{
         width: 99.5%;
+   
     }
     .learn-more{
         display: flex;
@@ -894,7 +1091,7 @@ and (max-device-width: 1024px){
     .image{
         position: relative;
         margin-left: 80px;
-        top: -15px;   
+        top: 100px;
     }
 
      .el1{
