@@ -41,8 +41,8 @@ section{
     background-color: #06865F;
     justify-content: center;
     gap: 12px;
-    width: 40%;
-    height: 60%;
+    width: 60%;
+    height: fit-content;
     padding: 20px 20px 20px 40px;
     border-radius: 12px;
 }
