@@ -135,11 +135,20 @@
     padding-bottom: 20px;
 
 }
+.projecting{
+    display: flex;
+    width: 90%;
+    gap: 50px;
+    margin: auto;
+}
+.slide{
+    display: none;
+}
 .projects img{
     max-width: 5%;
 }
 .project1{
-    width: 20%;
+    width: 22%;
     display: flex;
     flex-direction: column; 
     background-color: rgba(208, 235, 227, 0.5);
@@ -149,7 +158,7 @@
     text-align: left;
 }
 .project2{
-    width: 40%;
+    width: 45%;
     display: flex;
     flex-direction: column; 
     background-color: rgba(208, 235, 227, 0.5);
@@ -159,7 +168,7 @@
     text-align: left;
 }
 .project3{
-    width:20%;
+    width:22%;
     display: flex;
     flex-direction: column; 
     background-color: rgba(208, 235, 227, 0.5);
@@ -189,6 +198,18 @@
 }
 .slides{
     position: relative;
+}
+.back{
+    cursor: pointer;
+}
+.forward{
+    cursor: pointer;
+}
+.back:hover{
+    opacity: 0.5;
+}
+.forward:hover{
+    opacity:0.5;
 }
 /*this is for the design part*/
 .designtitle{
@@ -279,6 +300,7 @@ footer a{
     #container{
         padding: 0;
         max-width: 100%;
+        margin-top: 70px;
     }
     #nav .list-style {
         position: absolute;
@@ -286,15 +308,16 @@ footer a{
         flex-direction: column;
         background-color: rgb(0, 0, 0);
         width:100%;  
-        height: 80vh;
+        height: 60vh;
         left: 0px;
-        top: 0px;
+        top:60px;
         align-items: center;
         justify-content: baseline;
         z-index: -1;
         padding-top: 0;
         transition: 0.5s;
         overflow: hidden;
+        
     }
     #nav .icons{
         display: none;
@@ -443,11 +466,18 @@ footer a{
     }
      .back{
         margin-top: 30px;
+        cursor: pointer;
         
     }
+    .back:hover{
+        opacity: 0.5;
+    }
     .forward{
-        
+        cursor: pointer;
         margin-top: 30px;
+    }
+    .forward:hover{
+        opacity: 0.5;
     }
     /*this is for the design part*/
     .designtitle{
@@ -494,8 +524,37 @@ and (max-device-width: 1024px){
     #container{
         padding: 0;
         max-width: 90%;
+        margin-top: 70px;
     }
-    
+    #nav .list-style {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(0, 0, 0);
+        width:100%;  
+        height: 40vh;
+        left: 0px;
+        top: 0px;
+        align-items: center;
+        justify-content: baseline;
+        z-index: -1;
+        padding-top: 0;
+        transition: 0.5s;
+        overflow: hidden;
+    }
+    #nav .icons{
+        display: none;
+    }
+    .active{
+        opacity: 0;
+    }
+    #nav a{
+        color: #06865F;
+        transition: 0.2s;
+    }
+    #nav a:hover{
+        color: white;
+    }
     .burger-nav{
         max-width: 30px;
         display: block;
@@ -624,6 +683,12 @@ and (max-device-width: 1024px){
     .forward{
         
         margin-top: 30px;
+    }
+    .back:hover{
+        opacity: 0.5;
+    }
+    .forward:hover{
+        opacity:0.5;
     }
     /*this is for the design part*/
     .designtitle{
