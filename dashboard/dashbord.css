@@ -12,6 +12,7 @@
     grid-template-rows: repeat(12,1fr);
     height: 100vh;
     margin: auto;
+    overflow: hidden;
 }
 #nav{
     padding: 10px 30px 10px 10px;
@@ -218,6 +219,22 @@ td:first-child{
     position: relative;
     bottom: 100px;
     z-index: -1;
+}
+.blogy{
+    display: flex;
+    align-items: center;
+    gap: 450px;
+}
+.add{
+    background-color: #6900D2;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 10px;
+    
+}
+.add a{
+    color: white;
+    cursor: pointer;
 }
 #manUser{
     height: 100vh;
