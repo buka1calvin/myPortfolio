@@ -128,6 +128,10 @@
         border-radius: 12px;
         border: 1px solid rgb(167, 167, 167);
     }
+    .error{
+        color: red;
+        align-self: flex-start;
+    }
     #form div{
         display: flex;
         flex-direction: column;

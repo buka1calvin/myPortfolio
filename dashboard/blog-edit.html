@@ -18,18 +18,21 @@
     <button class="logout"type="submit">Log out</button>
     </nav>
     <section>
-    <form class="form"action="">
+    <form id="form"action="">
         <div class="input">
         <label for="title">title:</label>
-        <input type="text">
+        <input type="text"name="title">
+        <div class="error"id="error1">&#9888 enter the title</div>
     </div>
     <div class="input">
         <label for="image">image:</label>
-        <input type="file">
+        <input type="file"name="file">
+        <div class="error"id="error2">&#9888 enter the image</div>
     </div>
     <div class="input">
         <label for="description">description:</label>
-        <textarea name=""></textarea>
+        <textarea name="description"></textarea>
+        <div class="error"id="error3">&#9888 enter the description</div>
     </div>
     <div class="buttons">
         <button name="upload"type="submit">Upload</button>
@@ -50,8 +53,7 @@
 </footer>
 </main>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/froala-editor@latest/js/froala_editor.pkgd.min.js"></script>
-<script>
-    new FroalaEditor('textarea');
+<script src="/dashboard/blogEdit.js">
   </script>
 </body>
 </html>
