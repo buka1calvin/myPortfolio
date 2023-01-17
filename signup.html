@@ -15,16 +15,46 @@
         <header class="header">
             <a href="index.html"><img class="logo"src="/Group 3 (1).svg" alt=""></a>
         </header>
-        <form action=""id="form">
+        <form action=""id="form"name="form">
+            <a id="link" href="#signin">Create an account</a>
             <label class="username"for="Username:">Username:</label>
             <input type="text"name="Name">
+            <div class="error"id="error1">&#9888 fill the username</div>
             <label class="password"for="Password:">Password:</label>
-            <input type="password"name="Name">
-            <button type="submit"><a href="/dashboard/dashboard.html">Login</a></button>
+            <input type="password"name="password">
+            <div class="error"id="error2">
+                &#9888 fill the password
+            </div>
+            <button type="submit"><a href="/dashboard/dashboard.html">Login</button>
+        </form>
+        <form action=""id="signin"name="signin">
+            <a id="link2" href="#form">Login</a>
+            <label class="username"for="Username:">Username:</label>
+            <input type="text"name="Name">
+            <div class="errors"id="errorr1">&#9888 fill the username</div>
+            <label class="email"for="email:">email:</label>
+            <input type="email"name="email">
+            <div class="errors"id="errorr2">&#9888 fill the email</div>
+            <label class="password"for="Password:">Password:</label>
+            <input type="password"name="password">
+            <div class="errors"id="errorr3">
+                &#9888 fill the password
+            </div>
+            <label class="cpassword"for="cpassword:">comfirm Password:</label>
+            <input type="password"name="Pconfirmation">
+            <div class="errors"id="errorr4">
+                &#9888 confirm the password
+            </div>
+            <div class="errors"id="errorr5">
+                &#9888 password don't match
+            </div>
+            <button type="submit"><a href="signup.html">Create</a></button>
         </form>
         <div class="footer">
         <p>© 2022 Bukarani Calvin</p>
     </div>
     </main>
+    <script defer src="/signup.js"></script>
+    <script defer src="/signin.js"></script>
 </body>
 </html>

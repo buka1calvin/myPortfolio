@@ -412,6 +412,7 @@ p{
     font-size: 24px;
     padding-left: 12px;
     font-weight: 300;
+
 }
 .input2{
     padding: 1px;
@@ -421,6 +422,9 @@ p{
     gap: 12px;
     font-size: 24px;
     font-weight: 300;
+}
+input,textarea{
+    outline: none;
 }
 .items{
     animation-name: items;
@@ -443,6 +447,7 @@ p{
     position: relative;
     bottom: 22px;
     border: 1px solid #B78FA7;
+    padding-left: 5px;
 }
 #form textarea{
     height: 100px;
@@ -451,6 +456,7 @@ p{
     height: 165px;
     padding: 12px;
     border: 1px solid #B78FA7;
+    outline: none;
 }
 #form button{
     align-self: flex-end;
@@ -463,6 +469,14 @@ p{
 }
 #form button:hover{
     padding:15px 35px 15px 35px; ;
+}
+.error{
+    color: red;
+    background-color: rgb(253, 6, 6,0.2);
+    max-width:80%;
+    font-size: clamp(13px,15px,20px);
+    text-align: center;
+    display: none;
 }
 /*this is the about section */
 #about-me{

@@ -96,16 +96,19 @@
     </div>
     <div id="message">
         <h3>Send me An Email</h3>
-        <form action="submit"id="form">
+        <form action="/dashboard/dashboard.html"id="form"name="form">
             <div class="input1">
             <label for="Name">Name:</label><br>
-            <input type="text">
+            <input type="text"name="username"id="userName">
+            <div class="error"id="error1">please fill up the name</div>
             <label for="Name">Email:</label><br>
-            <input type="email">
+            <input type="email"name="email"id="email">
+            <div class="error"id="error2">please fill up the email</div>
             </div>
             <div class="input2">
             <label for="Name">Message:</label>
-            <textarea name="" id=""></textarea>
+            <textarea name="message" id="message"></textarea>
+            <div class="error"id="error4">please fill up the message</div>
             <button type="submit">Send</button>
 
         </form>

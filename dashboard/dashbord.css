@@ -143,6 +143,10 @@ li:hover{
 .els img{
     max-width: 50px;
 }
+.els:hover{
+    position: relative;
+    top: -5px;
+}
 .el-1{
     background: linear-gradient(286.28deg, #6900D2 11.27%, rgba(105, 0, 210, 0.38) 105.01%);;
     color: white;
@@ -223,7 +227,7 @@ td:first-child{
 .blogy{
     display: flex;
     align-items: center;
-    gap: 450px;
+    gap: 400px;
 }
 .add{
     background-color: #6900D2;
@@ -246,6 +250,9 @@ td:first-child{
 }
 .a{
     color: white;
+}
+.blogLink{
+    cursor: pointer;
 }
 
 
