@@ -8,6 +8,8 @@ let description=document.forms['form']['description'];
 let error1=document.getElementById("error1");
 let error2=document.getElementById("error2");
 let error3=document.getElementById("error3");
+let filePath=fileName.value;
+let fileExtension=/(\.jpg|\.jpeg|\.png|\.gif)$/i;
 blogForm.addEventListener("submit",function(e){
     e.preventDefault();
     if(title.value===""){
@@ -16,7 +18,7 @@ blogForm.addEventListener("submit",function(e){
         title.focus();
         return false;
     }
-    if(fileName.files[0] &&){
+    if(!fileExtension.exec(filePath)){
         error2.style.display="flex";
         fileName.style.border="1px solid red";
         fileName.focus();
@@ -24,7 +26,6 @@ blogForm.addEventListener("submit",function(e){
     }
     if(description.value===""){
         error3.style.display="flex";
-        description.style.border="1px solid red";
         description.focus();
         return false;
     }
@@ -36,11 +37,16 @@ title.addEventListener("textInput",function(){
         return true;
     }
 })
-fileName.addEventListener("textInput",function(){
-    if(fileName.files[0]===""){
-        error2.style.display="none";
-        fileName.style.border="1px solid transparent";
-        return true;
+fileName.addEventListener("change",function(){
+    if (fileExtension.exec(filePath)) {
+        var reader = new FileReader();
+        reader.onload = function(e) {
+            document.getElementById(
+                'imagePreview').innerHTML =
+                '<img src="' + e.target.result
+                + '"/>';
+        }; 
+        reader.readAsDataURL(fileName.files[0]);
     }
 })
 description.addEventListener("textInput",function(){

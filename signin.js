@@ -78,6 +78,11 @@ pwd.addEventListener("textInput",function(){
         errorr3.style.display="none";
         return true;   
     }
+    else if(pwd.value.length>=6){
+        pwd.style.borderBottom="3px solid green";
+        errorr7.style.display="none";
+        return true;   
+    }
     })
     comfirmPWD.addEventListener("textInput",function(){
         if(comfirmPWD.value===""){
