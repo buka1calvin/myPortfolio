@@ -8,6 +8,9 @@ let errorr2=document.getElementById("errorr2")
 let errorr3=document.getElementById("errorr3")
 let errorr4=document.getElementById("errorr4")
 let errorr5=document.getElementById("errorr5")
+let errorr6=document.getElementById("errorr6")
+let errorr7=document.getElementById("errorr7")
+let mailValid=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
 signin.addEventListener("submit",function(e){
     e.preventDefault();
@@ -17,17 +20,27 @@ signin.addEventListener("submit",function(e){
         accountName.focus();
         return false;
     }
-    if(email.value===""){
+    if(email.value.trim()===""){
         errorr2.style.display="flex";
         email.focus();
         return false;
     }
-    if(pwd.value===""){
+    else if(!email.value.match(mailValid)){
+        errorr6.style.display="flex";
+        email.focus();
+        return false;
+    }
+    if(pwd.value.length===0){
         errorr3.style.display="flex";
         pwd.focus();
         return false;
     }
-    if(comfirmPWD.value===""){
+    else if(pwd.value.length<6){
+        errorr7.style.display="flex";
+        pwd.focus();
+        return false;
+    }
+    if(comfirmPWD.value.length===0){
         errorr4.style.display="flex";
         comfirmPWD.focus();
         return false;
@@ -48,10 +61,15 @@ accountName.addEventListener("textInput",function(){
     }
 })
 email.addEventListener("textInput",function(){
-if(email.value===""){
+if(email.value.trim()===""){
     email.style.borderBottom="3px solid green";
     errorr2.style.display="none";
     return true;   
+}
+else if(email.value.match(mailValid)){
+    email.style.borderBottom="3px solid green";
+    errorr6.style.display="none";
+    return true;
 }
 })
 pwd.addEventListener("textInput",function(){

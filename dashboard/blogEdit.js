@@ -1,5 +1,6 @@
 //this is for the text editor
 new FroalaEditor('textarea');
+//
 let blogForm=document.getElementById("form");
 let title=document.forms['form']['title'];
 let fileName=document.forms['form']['file'];

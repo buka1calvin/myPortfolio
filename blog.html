@@ -52,15 +52,16 @@
         I love reading, but there are only so many hours in a day, so you need to choose your books wisely. With this in mind, I’ve put together a list of my favourite UI design books based on how useful I found them. I’ve highlighted my top 3 reads and added quick breakdowns of each one to help you decide on the right book for your particular needs.
     </p>
     </div>
-    <form  id="form"action="">
+    <form  id="form"action=""name="form"method="get">
         <div>
         <textarea name="messager"></textarea>
-        <div class="error"id="error1">&#9888 enter the comment</div>
+        <div class="errorr"id="error1">&#9888 enter the comment</div>
     </div>
         <div>
         <label for="Email">Email</label>
-        <input type="email"name="email">
-        <div class="error"id="error2"name="email">&#9888 enter your email</div>
+        <input type="text"name="email">
+        <div class="errorr"id="error2"name="email">&#9888 enter your email</div>
+        <div class="errorr"id="error3"name="email">&#9888 your email should contain '@'</div>
         <button type="submit">comment</button>
     </div>
     </form>

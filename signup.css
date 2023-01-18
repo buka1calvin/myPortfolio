@@ -29,6 +29,7 @@
     border-radius: 12px;
     justify-content: center;
     color: white;
+    display: none;
 }
 #link{
     align-self: flex-end;
@@ -75,7 +76,6 @@
     border-radius: 12px;
     justify-content: center;
     color: white;
-    display: none;
 }
 #link2{
     align-self: flex-end;

@@ -18,7 +18,9 @@ let email=document.forms['form']['email'];
 let getmessage=document.forms['form']['message'];
 var error1=document.getElementById("error1");
 var error2=document.getElementById("error2");
+var error2=document.getElementById("error3");
 var error4=document.getElementById("error4");
+let mailValid=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 form.addEventListener("submit",function(e){
 e.preventDefault();
 
@@ -31,6 +33,12 @@ if(username.value===""){
 if(email.value===""){
     email.style.border="1px solid red";
     error2.style.display="flex";
+    email.focus();
+    return false;
+}
+else if(!email.value.match(mailValid)){
+    email.style.border="1px solid red";
+    error3.style.display="flex";
     email.focus();
     return false;
 }
@@ -57,6 +65,10 @@ email.addEventListener("textInput",function(){
     if(email.value){
         email.style.border="1px solid green";
         error2.style.display="none";
+        return true;
+    }
+    else if(email.value.match(mailValid)){
+        error3.style.display="none";
         return true;
     }
 })
