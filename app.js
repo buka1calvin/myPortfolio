@@ -49,9 +49,28 @@ if(getmessage.value===""){
     getmessage.focus();
     return false;
 }
-else{
-    console.log("success");
+if(username.value.length>0 &&email.value.length>0 &&email.value.match(mailValid)&&getmessage.value.length>0){
+  
+  let  usernameValue = username.value;
+  let emailValue = email.value;
+  let messageValue = getmessage.value;
+  
+  let getContactInfo = JSON.parse(localStorage.getItem('users')) || []
+       
+        getContactInfo.push({
+            id:  getContactInfo.length +1,
+            usernameValue:usernameValue,
+            emailValue:emailValue,
+            messageValue:messageValue 
+        })
+
+let setcontactInfo = localStorage.setItem('users', JSON.stringify(getContactInfo))
+     username.value=="";
+     email.value="";
+     getmessage.value=""; 
 }
+
+
 })
 //adding event listeners to input and text area
 username.addEventListener("textInput",function(){
@@ -62,7 +81,7 @@ username.addEventListener("textInput",function(){
     }
 })
 email.addEventListener("textInput",function(){
-    if(email.value){
+    if(email.value>=0){
         email.style.border="1px solid green";
         error2.style.display="none";
         return true;
@@ -79,3 +98,4 @@ getmessage.addEventListener("textInput",function(){
         return true;
     }
 })
+//

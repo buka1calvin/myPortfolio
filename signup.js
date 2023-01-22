@@ -5,9 +5,14 @@ let password=document.forms['form']['password'];
 let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 let error1=document.getElementById("error1");
 let error2=document.getElementById("error2");
+let sameName=localStorage.getItem('username')
+let samePwd=localStorage.getItem('password')
 formValid.addEventListener("submit",function(e){
     e.preventDefault();
-    console.log("success");
+    if(username.value===sameName&&password.value===samePwd){
+        alert("successful!")
+    }
+
 if(username.value.trim()===""){
     error1.style.display="flex";
     username.focus();
@@ -24,9 +29,10 @@ else if(password.value.length<6){
     return false;
 }
 
+
 })
 username.addEventListener("textInput",function(){
-    if(username.value.trim()===""){
+    if(username.value.trim()!==""){
         username.style.borderBottom="3px solid green";
         error1.style.display="none";
         return true;

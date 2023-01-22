@@ -324,6 +324,7 @@ footer a{
     }
     .active{
         opacity: 0;
+        visibility: hidden;
     }
     #nav a{
         color: #06865F;
@@ -547,6 +548,7 @@ and (max-device-width: 1024px){
     }
     .active{
         opacity: 0;
+        visibility: hidden;
     }
     #nav a{
         color: #06865F;

@@ -25,17 +25,22 @@
         <div class="error"id="error1">&#9888 enter the title</div>
     </div>
     <div class="input">
-        <label for="image">image:</label>
-        <input type="file"name="file">
-        <div class="error"id="error2">&#9888 enter the image</div>
-    </div>
+    <input type="text" name="summary" id="summary"placeholder="summarize the description..." >
+    <div class="error"id="error4">&#9888 enter the summary </div>
+</div>
     <div class="input">
+        <div class="input">
+            <label for="image">image:</label>
+            <input type="file"name="file"id="filedocs">
+            <div class="error"id="error2">&#9888 enter the image</div>
+        </div>
+        
         <label for="description">description:</label>
         <textarea name="description"></textarea>
         <div class="error"id="error3">&#9888 enter the description</div>
     </div>
     <div class="buttons">
-        <button name="upload"type="submit">Upload</button>
+        <button name="upload"type="submit"id="submit" >Upload</button>
         <button type="reset">reset</button>
     </div>
     </form>

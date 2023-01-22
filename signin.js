@@ -14,7 +14,6 @@ let mailValid=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
 signin.addEventListener("submit",function(e){
     e.preventDefault();
-    console.log("success");
     if(accountName.value===""){
         errorr1.style.display="flex";
         accountName.focus();
@@ -51,9 +50,23 @@ signin.addEventListener("submit",function(e){
         comfirmPWD.focus();
         return false;
     }
+if(accountName.value.length>0 && email.value.trim()!==""&&email.value.match(mailValid)&&pwd.value!=="" && pwd.value.length>=6 &&comfirmPWD.value!==""&&comfirmPWD.value===pwd.value){
+    let signinName=accountName.value;
+    let passwordValue=pwd.value;
+    localStorage.setItem('username',signinName)
+    localStorage.setItem('password',passwordValue)
+    accountName.value=""
+    email.value=""
+    pwd.value=""
+    comfirmPWD.value=""
+    console.log("success");
+}
+    
+
+
 })
 accountName.addEventListener("textInput",function(){
-    if(accountName.value===""){
+    if(accountName.value.length>0){
         accountName.style.borderBottom="3px solid green";
         errorr1.style.display="none";
         return true;
