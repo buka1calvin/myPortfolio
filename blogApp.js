@@ -50,3 +50,9 @@ email.addEventListener("textInput",function(){
         return true;
     }
 })
+let params = (new URL(document.location)).searchParams;
+  let name = params.get('id')
+  let getBlogInfo=JSON.parse(localStorage.getItem('blogInfo'));
+
+
+const blogContent = getStorage.find(x => x.id == name)

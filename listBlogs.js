@@ -6,7 +6,7 @@ function myFunction(){
   
     blogHOld.innerHTML =`
     <img class="blog-image"src="${bloggs.fileName}" alt="">
-            <a href="/blog.html">
+            <a href="/blog.html?id=${bloggs.id}">
             <h3>${bloggs.title}</h3>
             <p>${bloggs.blogSummary}</p>
         </a>
