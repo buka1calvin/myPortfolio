@@ -57,7 +57,11 @@ blogForm.addEventListener("submit",async function(e){
         let getBlogInfo=JSON.parse(localStorage.getItem('blogInfo'))||[]
         getBlogInfo.push(
             {
+                likes:0,
                 id:getBlogInfo.length +1,
+                commentNbr:0,
+                commentValue:[],
+                emailValue:[],
                 title:title.value,
                 fileName:convert,
                 blogSummary:blogSummary.value,

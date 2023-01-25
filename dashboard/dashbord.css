@@ -210,7 +210,7 @@ td:first-child{
 }
 #manBlogs{
     height: 60vh;
-    z-index: -1;
+    z-index: 0;
 }
 .manager img{
     align-self: flex-start;
@@ -222,12 +222,13 @@ td:first-child{
 #dashdash{
     position: relative;
     bottom: 100px;
-    z-index: -1;
+    z-index: 0;
 }
 .blogy{
     display: flex;
     align-items: center;
     gap: 400px;
+    z-index: 4;
 }
 .add{
     background-color: #6900D2;
@@ -236,14 +237,14 @@ td:first-child{
     border-radius: 10px;
     
 }
-.add a{
+.blogLink{
     color: white;
     cursor: pointer;
 }
 #manUser{
     height: 100vh;
     padding-top: 100px;
-    z-index: -1;
+    z-index: 0;
 }
 .heart2{
     width: 20px;

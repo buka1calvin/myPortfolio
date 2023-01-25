@@ -49,6 +49,7 @@ if(getmessage.value===""){
     getmessage.focus();
     return false;
 }
+//this is for the contact message
 if(username.value.length>0 &&email.value.length>0 &&email.value.match(mailValid)&&getmessage.value.length>0){
   
   let  usernameValue = username.value;
@@ -64,7 +65,7 @@ if(username.value.length>0 &&email.value.length>0 &&email.value.match(mailValid)
             messageValue:messageValue 
         })
 
-let setcontactInfo = localStorage.setItem('users', JSON.stringify(getContactInfo))
+ localStorage.setItem('users', JSON.stringify(getContactInfo))
      username.value=="";
      email.value="";
      getmessage.value=""; 
