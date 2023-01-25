@@ -30,8 +30,7 @@ blogContent.likes +=1
 
 const blogIndex = getBlogInfo.findIndex(x => x.id == name)
 
-getBlogInfo[blogIndex] = blogContent;
-
+getBlogInfo[blogIndex] = blogContent; 
 localStorage.setItem('blogInfo',JSON.stringify(getBlogInfo));
 console.log("success")
 window.location.reload()
