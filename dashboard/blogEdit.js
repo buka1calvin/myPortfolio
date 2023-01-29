@@ -1,5 +1,5 @@
 //this is for the text editor
-new FroalaEditor('textarea');
+
 //
 const toBase64 = file =>new Promise((resolve, reject)=>{
     const reader= new FileReader();
@@ -7,14 +7,14 @@ const toBase64 = file =>new Promise((resolve, reject)=>{
     reader.onload=()=>resolve(reader.result);
     reader.onerror=error=>reject(error);
 });
-// let convert;
+//this is for the validation
 let fileNameValue =document.getElementById("filedocs")
 let submitBtn=document.getElementById("submit");
 let blogForm=document.getElementById("form");
 let blogSummary=document.forms['form']['summary']
 let title=document.forms['form']['title'];
 
-let description=document.forms['form']['description'];
+let description=document.getElementById("edit");
 let error1=document.getElementById("error1");
 let error2=document.getElementById("error2");
 let error3=document.getElementById("error3");
@@ -50,15 +50,16 @@ blogForm.addEventListener("submit",async function(e){
         return false;
     }
     if(title.value!=="" && blogSummary.value !==""&&fileName&&description.value!==""){
-        
+        //this is for converting the
         let   convert = await toBase64(fileName); 
         console.log(convert)
-    
+    let likes=0
         let getBlogInfo=JSON.parse(localStorage.getItem('blogInfo'))||[]
         getBlogInfo.push(
             {
-                likes:0,
+                
                 id:getBlogInfo.length +1,
+                likes:likes,
                 commentNbr:0,
                 commentValue:[],
                 emailValue:[],
@@ -73,6 +74,7 @@ blogForm.addEventListener("submit",async function(e){
         fileNameValue.value=""
         blogSummary.value=""
         description.value=""
+        editor.html.set('')
 
     }
 

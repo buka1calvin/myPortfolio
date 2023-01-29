@@ -4,6 +4,10 @@
         box-sizing: border-box;
         font-family: 'Poppins', sans-serif;
     } 
+    #container{
+        overflow: hidden;
+
+    }
     #header{
         display: grid;
         grid-template-columns:repeat(12,1fr);
@@ -56,11 +60,16 @@
     #articlee{
         width: 100%;
         margin: auto;
+        display: flex;
+        flex-direction: column;
     }
-    #container p{
+    #articlee div.para{
         font-weight: 300;
-        width: 100%;
+        width: 70%;
+        text-align: center;
+        font-size: 13px;
     }
+
     .article{
         display: flex;
         flex-direction: column;
@@ -69,13 +78,13 @@
         color:#4B4848;
         gap: 12px;
     }
-    .article h1{
+    .articlee h1{
         color:#4B4848;
         font-size: 45px;
         font-weight: 300;
         padding-bottom: 20px;
     }
-    .article .subtitle{
+    .articlee .subtitle{
         font-size: 24px;
     }
     .profiling{
@@ -112,7 +121,7 @@
     .articles p{
         font-weight: 300;
         font-size: 24px;
-        width: 100%;
+        width: 90%;
     }
     #form{
         display: flex;
@@ -180,6 +189,10 @@
 }
 #footer a{
     color: white;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-size: 20px;
+    padding: 20px;
     
 }
 #footer p{
@@ -191,17 +204,46 @@
     #container{
         padding: 0;
     }
-    #nav ul{
+
+    #nav .list-style {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(0, 0, 0);
+        width:100vw;  
+        height: 70vh;
+        z-index:1;
+        left: 0px;
+        top: 20px;
+        bottom: 200px;
+        transition: 0.5s;
+        overflow: hidden;
+    }
+    #nav li img{
         display: none;
+    }
+  .active{
+        visibility: hidden;
+        opacity: 0;
+    }
+    #nav a{
+        color: #06865F;
+        transition: 0.2s;
     }
     .burger-nav{
         display: block;
         position: relative;
-        left: 10px;
+        left: 0px;
+        z-index: 2;
+        cursor: pointer;
     }
     #logo img{
         width: 320px;
         height: 100px;
+    }
+    #logo{
+        z-index: 2;
+        cursor: pointer;
     }
     #form{
         display: flex;

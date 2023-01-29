@@ -1,6 +1,18 @@
 //this is for the navbar toggle
-let toggle=document.getElementById("toggleBtn");
-let navList=document.getElementById("listing");
+var toggleButton=document.getElementById("toggleBtn");
+var navList=document.getElementById("listings");
+var indexes=document.getElementsByClassName("indexes");
+
+navList.classList.add('active')
+toggleButton.addEventListener("click",function(){
+navList.classList.toggle('active');
+})
+
+for (let btn of indexes){
+    btn.addEventListener("click",function(){
+        navList.classList.toggle('active');
+        })
+}
 //this is for the single blog page
 let params = (new URL(document.location)).searchParams;
   let name = params.get('id')
@@ -22,7 +34,7 @@ function myBlog(){
 </div>
     <img class="single-img"src="${blogContent.fileName}" alt="">
     <div class="articles">
-    <p >
+    <p class="para">
         ${
             blogContent.description
         }
@@ -56,19 +68,23 @@ commentForm.addEventListener("submit",function(e){
   let getBlogInfo=JSON.parse(localStorage.getItem('blogInfo'));
     let blogContent = getBlogInfo.find(x => x.id == name)
     blogContent.commentNbr +=1;
-    blogContent.commentValue.push({commenting:comment.value});
-    blogContent.emailValue.push({emailing:email.value});
+  
+    blogContent.commentValue.push({
+        id:blogContent.commentValue.length +1,
+        commenting:comment.value,
+        emailing:email.value,   
+    })
   const blogIndex = getBlogInfo.findIndex(x => x.id == name)
   getBlogInfo[blogIndex] = blogContent;
   localStorage.setItem('blogInfo',JSON.stringify(getBlogInfo))
   comment.value=""
   email.value=""
     }
-    if(email.value.trim()===""){
+    if(email.value.length.trim()===""){
         email.style.border="1px solid red";
         error2.style.display="flex";
         email.focus();
-        return true;
+        return false;
     }
     else if(!email.value.match(mailformat)){
         email.style.border="1px solid red";
@@ -85,7 +101,7 @@ comment.addEventListener("textInput",function(){
     }
 })
 email.addEventListener("textInput",function(){
-    if(email.value.trim()!==""){
+    if(email.value.length.trim()>0){
         email.style.border="1px solid transparent";
         error2.style.display="none";
         return true;

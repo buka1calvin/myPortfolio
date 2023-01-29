@@ -1,0 +1,20 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "this is where you can find all the information necessary  about me(skills,projects,my blog posts and my stories).",
+  "main": "portfolio.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/buka1calvin/myPortfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/buka1calvin/myPortfolio/issues"
+  },
+  "homepage": "https://github.com/buka1calvin/myPortfolio#readme"
+}

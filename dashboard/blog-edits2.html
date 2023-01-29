@@ -8,17 +8,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;0,1000;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Poppins:ital,wght@0,100;0,300;0,500;0,700;1,100;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="blog-edit.css">
+<link rel="stylesheet" href="blog-edit2.css">
     <title>Blog edit</title>
 </head>
 <body>
     <main>
     <nav id="nav">
     <img src="/Group 3.svg" alt="">
-    <button class="logout"type="submit"><a href="dashboard.html">Log out</a></button>
+    <button class="logout"type="submit">Log out</button>
     </nav>
     <section>
-    <form id="form"action="">
+    <form id="form2"action=""name="form2">
         <div class="input">
         <label for="title">title:</label>
         <input type="text"name="title">
@@ -36,11 +36,11 @@
         </div>
         
         <label for="description">description:</label>
-        <textarea name="description"  id="edit"></textarea>
+        <textarea name="description" id="edit"></textarea>
         <div class="error"id="error3">&#9888 enter the description</div>
     </div>
     <div class="buttons">
-        <button name="upload"type="submit"id="submit" >Upload</button>
+        <button name="upload"type="submit"id="submit" >save</button>
         <button type="reset">reset</button>
     </div>
     </form>
@@ -58,14 +58,14 @@
 </footer>
 </main>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/froala-editor@latest/js/froala_editor.pkgd.min.js"></script>
-<script src="/dashboard/blogEdit.js">
 
-
-  </script>
   <script>
-    let editor = new FroalaEditor('#edit',{
+      let editor = new FroalaEditor('#edit',{
         heightMax:200,
-    });
+      });
   </script>
+
+<script src="/dashboard/blog-edit2.js">
+</script>
 </body>
 </html>

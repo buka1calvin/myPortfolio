@@ -2,35 +2,39 @@ let table =document.getElementById('table')
 let commentAppend=document.getElementById("table2")
 let blogShow=document.getElementById("table3")
 let   TotalMsg=getContactInfo = JSON.parse(localStorage.getItem('users')) || [];
+//this is for the comment
 function showComment(){
     let params = (new URL(document.location)).searchParams;
     let name = params.get('id')
     let getBlogInfo=JSON.parse(localStorage.getItem('blogInfo'))
     let blogCont = getBlogInfo.find(x => x.id === name)   
 for(let value of getBlogInfo){
-   let div = document.createElement('tr')
-   div.innerHTML = `
-   <td>${value.id}</td>
-   <td>${value.commentValue[0].commenting}</td>
-   <td>${value.emailValue[0].emailing}</td>
-   <td><img class="heart2"src="/article.svg" alt=""> ${value.id} Articles</td>
-   <td><button type="submit" class="edit">contact arthor</button></td>
-   <td><button type="submit"onclick="myDelete(${value.id})"class="delete">delete query</button></td>`
-        commentAppend.appendChild(div)
-
- }
+    for(let val of value.commentValue){
+        let div = document.createElement('tr')
+        div.innerHTML = `
+        <td>${val.id}</td>
+        <td>${val.commenting}</td>
+        <td>${val.emailing}</td>
+        <td><img class="heart2"src="/article.svg" alt="">Article ${value.id}</td>
+        <td><button type="submit" class="edit">contact arthor</button></td>
+        <td><button type="submit"onclick="myDelete(${value.id},${val.id})"class="delete">delete query</button></td>`
+             commentAppend.appendChild(div)
+      }
+    }
+  
 }
 showComment()
-function myDelete(id){
+function myDelete(blogId,id){
     let getBlogInfo=JSON.parse(localStorage.getItem('blogInfo'))
-    let index2= getBlogInfo.findIndex((obj) =>obj.id === id)
+    let blogIndex= getBlogInfo.findIndex(x => x.id == blogId) 
+    let commentIndex= getBlogInfo[blogIndex].commentValue.findIndex(x => x.id == id) 
+    getBlogInfo[blogIndex].commentValue.splice(commentIndex,1)
 
-    getBlogInfo.splice(index2, 1)
-   
-     localStorage.setItem('blogInfo', JSON.stringify(getBlogInfo))
+    localStorage.setItem('blogInfo', JSON.stringify(getBlogInfo))
    
       window.location.reload()
 }
+//this is for the message section
 function deleteMessage(id){
 
  let index= TotalMsg.findIndex((obj) =>obj.id === id)
@@ -61,9 +65,9 @@ myFunction();
 //this is for the blog section
 function blogFunc(){
     let params = (new URL(document.location)).searchParams;
-    let name = params.get('id')
+    let blogName = params.get('id')
     let getBlogInfo=JSON.parse(localStorage.getItem('blogInfo'))
-    let blogCont = getBlogInfo.find(x => x.id === name)
+    let blogCont = getBlogInfo.find(y => y.id === blogName)
     for(let values of getBlogInfo){
         let tableRow2=document.createElement("tr")
         tableRow2.innerHTML=`
@@ -71,8 +75,8 @@ function blogFunc(){
                         <td>${values.title}</td>
                         <td>${values.commentNbr} views</td>
                         <td><img class="heart"src="/heart 2.svg" alt=""> ${values.likes} likes</td>
-                        <td>${values.commentNbr}Comments</td>
-                        <td><button type="submit" class="edit">Edit Blog</button></td>
+                        <td>${values.commentValue.length}Comments</td>
+                        <td><button type="submit" class="edit"onclick="editBlog(${values.id})">Edit Blog</button></td>
                         <td><button type="submit" class="delete"onclick="delBlog(${values.id})">Delete Blog</button></td>
         `
         blogShow.appendChild(tableRow2)
@@ -88,4 +92,15 @@ function delBlog(id){
      localStorage.setItem('blogInfo', JSON.stringify(getBlogInfo))
    
       window.location.reload()
+}
+//this is for the edit function
+function editBlog(id){
+    let getBlogInfo=JSON.parse(localStorage.getItem('blogInfo'))
+    let index4= getBlogInfo.findIndex((obj) =>obj.id === id)
+
+    getBlogInfo[index4]
+   
+     localStorage.setItem('editBlog', JSON.stringify(getBlogInfo[index4]))
+   
+      window.location="blog-edits2.html"
 }
