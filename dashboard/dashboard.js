@@ -1,3 +1,28 @@
+//this about the visiblity
+let blog=document.getElementById("dashdash");
+let querry=document.getElementById("manQuerry");
+let comments=document.getElementById("manUser")
+let list=document.getElementsByClassName("indexes")
+let link=document.getElementsByClassName("index")
+let link2=document.getElementsByClassName("index2")
+let link3=document.getElementsByClassName("index3")
+
+link[0].addEventListener("click",function(){
+    blog.style.display="flex";
+    querry.style.display="none";
+    comments.style.display="none";
+})
+link2[0].addEventListener("click",function(){
+    querry.style.display="flex";
+    blog.style.display="none";
+    comments.style.display="none";
+})
+link3[0].addEventListener("click",function(){
+    comments.style.display="flex";
+    blog.style.display="none";
+    querry.style.display="none";
+})
+//this is about table
 let table =document.getElementById('table')
 let commentAppend=document.getElementById("table2")
 let blogShow=document.getElementById("table3")

@@ -73,7 +73,6 @@ blogForm.addEventListener("submit",async function(e){
         title.value=""
         fileNameValue.value=""
         blogSummary.value=""
-        description.value=""
         editor.html.set('')
 
     }
@@ -88,7 +87,7 @@ title.addEventListener("textInput",function(){
 })
 
 description.addEventListener("textInput",function(){
-    if(description.value!==""){
+    if(description.value.length>0){
         error3.style.display="none";
         description.style.border="1px solid transparent";
         return true;

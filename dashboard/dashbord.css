@@ -218,6 +218,7 @@ td:first-child{
 #manQuerry{
     height: 100vh;
     padding-top: 100PX;
+    
 }
 #dashdash{
     position: relative;
@@ -254,6 +255,60 @@ td:first-child{
 }
 .blogLink{
     cursor: pointer;
+}
+@media screen and (min-device-width: 768px)
+and (max-device-width: 1024px){
+    #main{
+        display: flex;
+        flex-direction: column;
+        gap:0;
+        overflow:scroll;
+    }
+    #nav{
+        z-index: 3;
+    }
+    #dashboard-check{
+        width: 90%;
+        height: fit-content;
+        position: fixed;
+        display: flex;
+        flex-direction: row;
+        justify-content:space-between;
+        align-items: center;
+        z-index: 3;
+        top: 70px;
+
+    }
+    .profiling{
+        display: flex;
+        align-self: flex-start;
+        justify-self: center;
+    }
+    .dash{
+        align-self: flex-end;
+    }
+    #main-dash{
+        position: relative;
+        top: 310px;
+        gap: 40px;
+    }
+    .group{
+        display: flex;
+        gap: 50px;
+        align-self: center;
+    }
+    .manager{
+        gap:0px;
+    }
+    #dashdash{
+        position: relative;
+        bottom: 390px;
+        z-index: 0;
+    }
+    .manager h1{
+        font-size: clamp(15px,20px,35px);
+    }
+    
 }
 
 
