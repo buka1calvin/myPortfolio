@@ -1,4 +1,4 @@
-let blogsList = document.getElementById('group')
+ let blogsList = document.getElementById('group')
 let getBlogInfo=JSON.parse(localStorage.getItem('blogInfo'))||[]
 function myFunction(){
     for(let bloggs of getBlogInfo){
