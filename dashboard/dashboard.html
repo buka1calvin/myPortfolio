@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dashbord.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;0,1000;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Poppins:ital,wght@0,100;0,300;0,500;0,700;1,100;1,400&display=swap" rel="stylesheet">
+    <title>Dashboard</title>
+</head>
+<body>
+    <main id="main">
+        <nav id="nav">
+            <a href="/index.html"><img src="/dash-logooo.svg" alt=""></a>
+    <button class="logout"type="submit"><a class="a"href="/signup.html">Log out</a></button>
+        </nav>
+        <section id="dashboard-check">
+            <div class="profiling">
+                <img src="/profile.JPG"alt="">
+                <div>
+                    <h3>@Me</h3>
+                    <p>project Manager</p>
+                </div>
+            </div>
+            <div class="dash">
+                <h1>Dashboard</h1>
+                <nav class="nav-dash">
+                <ul id="lists">
+                    <li class="indexes"><a class="index"href="#manBlogs">Manage Blogs</a></li>
+                    <li class="indexes"><a class="index2"href="#manQuerry">Manage Querries</a></li>
+                    <li class="indexes"><a class="index3"href="#manUser">Manage Comments</a></li>
+                </ul>
+            </nav>
+            </div>
+        </section>
+        <section id="main-dash">
+            <!--this is for the high light div-->
+            <div class="highlight"id="manBlogs">
+                <img src="/dash-logo.svg" alt="">
+                <div class="group">
+                    <div class="els el-1">
+                        <img src="/clients.svg"alt="">
+                        <div>
+                            <h3>clients Total:</h3>
+                            <p>6+ clients</p>
+                        </div>
+                        <p>increased by 4%</p>
+                    </div>
+                    <div class="els el-2">
+                        <img src="/visitors.svg"alt="">
+                        <div>
+                            <h3>Total visitors:</h3>
+                            <p>7 +clients</p>
+                        </div>
+                        <p>increased by 6%</p>
+                    </div>
+                    <div class="els el-3">
+                        <img src="/review.svg"alt="">
+                        <div>
+                            <h3>Total Reviews:</h3>
+                            <p>15+ reviews</p>
+                        </div>
+                        <p>increased by 22%</p>
+                    </div>
+                </div>
+            </div>
+            <!--this is the table part-->
+            <div  class="manager"id="dashdash">
+                <div class="blogy">
+                <h1>Blogs Update</h1>
+                <button class="add"type="submit"><a class="blogLink" href="/dashboard/blog-edit.html"alt=""> ADD+</a></button>
+                </div>
+                <table id="table3">                        
+                </table>
+            </div>
+            <div id="manQuerry"class="manager">
+                <img src="/dash-logo.svg" alt="">
+                <h1>QUERRY MANAGEMENT</h1>
+                <table id="table">
+
+                    
+                </table>
+            </div>
+            <div id="manUser"class="manager">
+                <img src="/dash-logo.svg" alt="">
+                <h1>COMMENTS MANAGEMENT</h1>
+                <table id="table2" >
+                </table>
+            </div>
+        </section>
+    </main>
+  <script src="dashboard.js"></script>     
+</body>
+</html>

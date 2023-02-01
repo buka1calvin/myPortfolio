@@ -1,0 +1,735 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+#main{
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+#header{
+    display: grid;
+    grid-template-columns:repeat(12,1fr);
+    grid-template-rows: 100px;
+    background-color: black;
+    grid-gap: 5px;
+    position: fixed;
+    right: 0;
+    width: 100%;
+    z-index: 2;
+}
+#logo{
+    grid-column: 1/5;
+}
+#nav{
+ 
+    grid-column: 5/-1;
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+    font-size: 28px;
+}
+#nav ul{
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    padding-right: 20px;
+    align-items: center;
+    color: white;
+}
+.list-style{
+    list-style: none;
+    
+
+}
+.list-style A{
+    text-decoration: none;
+    color: white;
+}
+.icons{
+    width: 40px;
+    height: 34px;
+}
+.burger-nav{
+    color: aliceblue;
+    width: 45px;
+    height: 30px;
+    position: absolute;
+    right: 72px;
+    display: none;
+}
+/*here we are going to design the portfolio part*/
+#container{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 100%;
+    padding-top: 50px;
+}
+.portfolio{
+    display: flex;
+    height: 510px;
+    border-bottom: 2px solid gray;
+}
+.img{
+    width: 50%;
+}
+.img img{
+    margin-top: 58px;
+    margin-left: 150px;
+    max-width: 520px;
+    max-height: 450px;
+}
+.information{
+    width: 50%;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.button-info{
+    align-self: center;
+    padding: 10px 20px 10px 20px;
+    border: none;
+    border-radius: 12px;
+    background-color: #106932;
+    margin-right: 202px;
+}
+.button-info a{
+    text-decoration: none;
+    color: white;
+    font-weight: 300;
+    font-size: larger;
+}
+
+.title{
+    font-weight: 800;
+    font-size: 96px;
+    color: #4B4848;
+}
+/*this is for my work part */
+#mywork{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    height: fit-content;
+
+}
+.web-part{
+    text-align: center;
+}
+.webpart{
+    font-weight: 300;
+    color:#0DEA65;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 72px;
+}
+.projects{
+    margin-top: 30px;
+    display: flex;
+    gap: 50px;
+    width: 100%;
+    padding-bottom: 20px;
+
+}
+.projecting{
+    display: flex;
+    width: 90%;
+    gap: 50px;
+    margin: auto;
+}
+.slide{
+    display: none;
+}
+.projects img{
+    max-width: 5%;
+}
+.project1{
+    width: 22%;
+    display: flex;
+    flex-direction: column; 
+    background-color: rgba(208, 235, 227, 0.5);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+}
+.project2{
+    width: 45%;
+    display: flex;
+    flex-direction: column; 
+    background-color: rgba(208, 235, 227, 0.5);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+}
+.project3{
+    width:22%;
+    display: flex;
+    flex-direction: column; 
+    background-color: rgba(208, 235, 227, 0.5);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+}
+.project1 img{
+    max-width: 209.69px;
+    height: 215.7px;
+    border-radius: 12px;
+    align-self: center;
+}
+.project2 img{
+    max-width: 450.74px;
+    max-height: 319.03px;
+    border-radius: 12px;
+    align-self: center;
+}
+.project3 img{
+    align-self: center;
+    max-width: 300px;
+    height: 218px;
+    border-radius: 12px;
+
+}
+.slides{
+    position: relative;
+}
+.back{
+    cursor: pointer;
+}
+.forward{
+    cursor: pointer;
+}
+.back:hover{
+    opacity: 0.5;
+}
+.forward:hover{
+    opacity:0.5;
+}
+/*this is for the design part*/
+.designtitle{
+    font-style: normal;
+font-weight: 300;
+font-size: 72px;
+line-height: 108px;
+color: #FD0E9D;
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+text-align: center;
+}
+.projects-design{
+    display: flex;
+    gap: 80px;
+    justify-content: center;
+    margin-top: 30px;
+}
+.projects-design p{
+    font-weight: 300;
+    font-size: 20px;
+    padding-left: 10px;
+
+}
+.design1{
+    background: #FFFFFF;
+    box-shadow: 1px 1px 6px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding-bottom: 18px;
+    margin-top: 12px;
+}
+.design2{
+    background: #FFFFFF;
+    box-shadow: 1px 1px 6px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding-bottom: 18px;
+    margin-top: 12px;
+}
+.design3{
+
+    background: #FFFFFF;
+    box-shadow: 1px 1px 6px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding-bottom: 18px;
+    margin-top: 12px;
+}
+.design1 img{
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+}
+.design2 img{
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+}
+.design3 img{
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+}
+#footer{
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    background-color: #06865F;
+    align-items: center;
+    color: white;
+}
+#footer ul{
+    display: flex;
+    padding-right: 30px;
+    gap: 12px;
+    list-style: none;
+}
+footer a{
+    color: white;
+    text-decoration: none;
+}
+#footer p{
+    color: white;
+    margin-left: 20px;
+    text-align: center;
+}
+@media only screen and (max-width:768px){
+    #main{
+        max-width: 100%;
+    }
+    #container{
+        padding: 0;
+        max-width: 100%;
+        margin-top: 70px;
+    }
+    #nav .list-style {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(0, 0, 0);
+        width:100%;  
+        height: 60vh;
+        left: 0px;
+        top:60px;
+        align-items: center;
+        justify-content: baseline;
+        z-index: -1;
+        padding-top: 0;
+        transition: 0.5s;
+        overflow: hidden;
+        
+    }
+    #nav .icons{
+        display: none;
+    }
+    .active{
+        opacity: 0;
+        visibility: hidden;
+    }
+    #nav a{
+        color: #06865F;
+        transition: 0.2s;
+    }
+    #nav a:hover{
+        color: white;
+    }
+    .burger-nav{
+        max-width: 30px;
+        display: flex;
+        position: relative;
+        left: -20px;
+        cursor: pointer;
+        z-index: 7;
+    }
+    #logo img{
+        max-width: clamp(250px,250px,320px);
+        height: 100px;
+    }
+    .portfolio{
+        margin-top: 12px;
+        max-height: fit-content;
+        display: flex;
+        flex-direction:column-reverse;
+        align-items: center;
+        gap: 12px;
+    }
+    #container{
+        padding-top: 50px;
+    }
+    .information{
+        padding: 0;
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+
+    }
+    .button-info{
+        align-self: center;
+        width: 150px;
+        margin-left: 170px;
+        border: none;
+    }
+    .img{
+        width: 90%;
+        height: 50%;
+        z-index: -1;
+        
+        
+    }
+    .img img{
+        max-width: 80%;
+        height: 80%;
+        position: relative;
+        right: 100px;
+        bottom: 7px;
+        }
+    .title{
+        font-size: clamp(15px,2rem,3rem);
+    }
+    .information h3{
+        font-size: clamp(13px,16px,32px);
+    }
+    /*this is for the web part*/
+    #mywork{
+        width: 1005;
+        padding-top: 100px;
+    }
+    .webpart{
+        font-size: clamp(15px,30px,32px);
+        letter-spacing: 12px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .projects{
+        display: flex;
+        width: 100%;
+        height: 50%;
+        align-items: center;
+        gap: 10px;
+    }
+    .project1{
+        display: none;
+        position: absolute;
+        width: 0%;
+    }
+    .project3{
+        display: none;
+        width: 0%;
+        position: absolute;
+    }
+
+    .project2{
+        width:  100%;
+        display: flex;
+        flex-direction: column; 
+        background-color: rgba(208, 235, 227, 0.5);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        text-align: left;
+
+    }
+    .project2 img{
+        max-width: 100%;
+    }
+    .slides{
+        position: relative;
+        top: 60px;
+        max-width:100%;
+        display: flex;
+        gap:12px;
+        align-self: center;
+        justify-self: center;
+        margin: auto;
+
+    }
+    .img-1{
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        bottom: 20px;
+    }
+    .img-2{
+        width: 120px;
+        height: 50px;
+        position: absolute;
+        left: 70px;
+        bottom: 20px;
+    }
+    .img-3{
+        width: 70px;
+        height: 50px;
+        position: absolute;
+        left: 200px;
+        bottom: 20px;
+    }
+     .back{
+        margin-top: 30px;
+        cursor: pointer;
+        
+    }
+    .back:hover{
+        opacity: 0.5;
+    }
+    .forward{
+        cursor: pointer;
+        margin-top: 30px;
+    }
+    .forward:hover{
+        opacity: 0.5;
+    }
+    /*this is for the design part*/
+    .designtitle{
+        font-size: clamp(15px,30px,32px);
+        text-align: center;
+    }
+    .projects-design{
+        display: flex;
+        flex-direction: column;
+    }
+    .projects-design div{
+        width: 100%;
+    }
+    .design1 img{
+        width: 100%;
+    }
+    .design2 img{
+        width: 100%;
+    }
+    .design3 img{
+        width: 100%;
+    }
+    #footer{
+        display: flex;
+        flex-direction:column-reverse;
+        gap: 10px;
+        padding: 20px;
+        justify-content: center;
+        text-align: center;
+    }
+    #footer p{
+        margin-right: 40px;
+        width: fit-content;
+    }
+
+
+
+}
+@media screen and (min-device-width: 768px)
+and (max-device-width: 1024px){
+    #main{
+    max-width: 100%;
+    }
+    #container{
+        padding: 0;
+        max-width: 90%;
+        margin-top: 70px;
+    }
+    #nav .list-style {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(0, 0, 0);
+        width:100%;  
+        height: 40vh;
+        left: 0px;
+        top: 0px;
+        align-items: center;
+        justify-content: baseline;
+        z-index: -1;
+        padding-top: 0;
+        transition: 0.5s;
+        overflow: hidden;
+    }
+    #nav .icons{
+        display: none;
+    }
+    .active{
+        opacity: 0;
+        visibility: hidden;
+    }
+    #nav a{
+        color: #06865F;
+        transition: 0.2s;
+    }
+    #nav a:hover{
+        color: white;
+    }
+    .burger-nav{
+        max-width: 30px;
+        display: block;
+        position: relative;
+        left: -20px;
+    }
+    #logo img{
+        max-width: clamp(250px,250px,320px);
+        height: 100px;
+    }
+    .portfolio{
+        margin-top: 0px;
+        height: fit-content;
+        gap: 12px;
+    }
+    .information{
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+
+    }
+    .button-info{
+        align-self: center;
+        width: 150px;
+        margin-left: 170px;
+        margin-bottom: 12px;
+    }
+    .img{
+        width: 90%;
+        height: 100%;
+        z-index: -1;
+        
+        
+    }
+    .img img{
+        max-width: 80%;
+        height: 300px;
+        position: relative;
+        right: 100px;
+        top:10px
+        }
+    .title{
+        font-size: clamp(15px,2rem,3rem);
+    }
+    .information h3{
+        font-size: clamp(13px,16px,32px);
+    }
+    /*this is for the web part*/
+    #mywork{
+        width: 1005;
+    }
+    .webpart{
+        font-size: clamp(15px,30px,32px);
+        letter-spacing: 12px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .projects{
+        display: flex;
+        width: 100%;
+        height: 50%;
+        align-items: center;
+        gap: 10px;
+    }
+    .project1{
+        display: none;
+        position: absolute;
+        width: 0%;
+    }
+    .project3{
+        display: none;
+        width: 0%;
+        position: absolute;
+    }
+
+    .project2{
+        width:  100%;
+        display: flex;
+        flex-direction: column; 
+        background-color: rgba(208, 235, 227, 0.5);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        text-align: left;
+
+    }
+    .project2 img{
+        max-width: 100%;
+    }
+    .slides{
+        position: relative;
+        top: 60px;
+        max-width:100%;
+        display: flex;
+        gap:12px;
+        align-self: center;
+        justify-self: center;
+        margin-left: 200px;
+
+    }
+    .img-1{
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        bottom: 20px;
+    }
+    .img-2{
+        width: 120px;
+        height: 50px;
+        position: absolute;
+        left: 70px;
+        bottom: 20px;
+    }
+    .img-3{
+        width: 70px;
+        height: 50px;
+        position: absolute;
+        left: 200px;
+        bottom: 20px;
+    }
+     .back{
+        margin-top: 30px;
+        
+    }
+    .forward{
+        
+        margin-top: 30px;
+    }
+    .back:hover{
+        opacity: 0.5;
+    }
+    .forward:hover{
+        opacity:0.5;
+    }
+    /*this is for the design part*/
+    .designtitle{
+        font-size: clamp(15px,30px,32px);
+        text-align: center;
+    }
+    .projects-design{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 12px;
+    }
+    .projects-design div{
+        width: 90%;
+        height: 250px;
+
+        
+    }
+    .design1 img{
+        width: 100%;
+    }
+    .design2 img{
+        width: 100%;
+    }
+    .design3 img{
+        width: 100%;
+    }
+    #footer{
+        display: flex;
+        flex-direction:column-reverse;
+        gap: 10px;
+        padding: 20px;
+        justify-content: center;
+        text-align: center;
+    }
+    #footer p{
+        margin-right: 40px;
+        width: fit-content;
+    }
+
+}
+

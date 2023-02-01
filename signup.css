@@ -1,0 +1,140 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#main{
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)),url("/lorenzo-herrera-yP89apz2TAA-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;;
+}
+#form{
+    align-self: center;
+    position: relative;
+    top: 70px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255,0.2);
+    width:500px;
+    height: 400px;
+    padding: 50px;
+    gap: 12px;
+    border-radius: 12px;
+    justify-content: center;
+    color: white;
+    
+}
+#link{
+    align-self: flex-end;
+    color: rgb(255, 0, 191,1);
+    font-weight: 300;
+}
+#form input{
+    width: 65%;
+    margin-left: 85px;
+    border: none;
+    border-bottom: 3px solid rgb(255, 0, 191,1);
+    background: none;
+    outline: none;
+    color: white;
+}
+
+.error{
+    font-size: clamp(13px,15px,20px);
+    color: rgb(255, 0, 191,1);
+    font-weight: 300;
+    display: none;
+}
+#form button{
+    align-self: center;
+    padding: 7px 40px;
+    background-color: rgb(255, 0, 191,1);
+    color: rgb(255, 255, 255,1); 
+    font-size: 20px; 
+    letter-spacing: 2px;
+    border: none;
+    font-weight: bold;
+}
+#signin{
+    align-self: center;
+    position: relative;
+    top: 30px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255,0.2);
+    width:500px;
+    height: 500px;
+    padding: 50px;
+    gap: 12px;
+    border-radius: 12px;
+    justify-content: center;
+    color: white;
+    display: none;
+    
+}
+#link2{
+    align-self: flex-end;
+    color: rgb(255, 0, 191,1);
+    font-weight: 300;
+}
+#signin input{
+    width: 65%;
+    margin-left: 85px;
+    border: none;
+    border-bottom: 3px solid rgb(255, 0, 191,1);
+    background: none;
+    outline: none;
+    color: white;
+}
+#signin button{
+    align-self: center;
+    padding: 7px 40px;
+    background-color: rgb(255, 0, 191,1);
+    color: rgb(255, 255, 255,1); 
+    font-size: 20px; 
+    letter-spacing: 2px;
+    border: none;
+    font-weight: bold;
+}
+.errors{
+    font-size: clamp(13px,15px,20px);
+    color: rgb(255, 0, 191,1);
+    font-weight: 300;
+    display: none;
+}
+.footer{
+    color: rgb(250, 78, 207);
+    text-align: center;
+    margin-top: 110px;
+}
+button a{
+    text-decoration: none;
+    color: white;
+}
+
+@media only screen and (max-width: 780px) {
+    #main{
+        width: 100%;
+        display: flex;
+        font-size: medium;
+    }
+    .logo{
+        width: 200px;
+    }
+    #form{
+        width: 80%;
+    }
+    #signin{
+        width: 85%;
+    }
+
+
+    
+}
