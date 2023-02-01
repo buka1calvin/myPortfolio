@@ -1,13 +1,10 @@
+
  *{
         padding: 0;
         margin: 0;
         box-sizing: border-box;
         font-family: 'Poppins', sans-serif;
     } 
-    #container{
-        overflow: hidden;
-
-    }
     #header{
         display: grid;
         grid-template-columns:repeat(12,1fr);
@@ -57,19 +54,14 @@
         right: 72px;
         display: none;
     }
-    #articlee{
-        width: 100%;
+    #container{
+        width: 90%;
         margin: auto;
-        display: flex;
-        flex-direction: column;
     }
-    .articles .para{
+    #container p{
         font-weight: 300;
         width: 100%;
-        text-align: center;
-        font-size: 13px;
     }
-
     .article{
         display: flex;
         flex-direction: column;
@@ -78,13 +70,13 @@
         color:#4B4848;
         gap: 12px;
     }
-    .articlee h1{
+    .article h1{
         color:#4B4848;
         font-size: 45px;
         font-weight: 300;
         padding-bottom: 20px;
     }
-    .articlee .subtitle{
+    .article .subtitle{
         font-size: 24px;
     }
     .profiling{
@@ -103,9 +95,6 @@
         grid-row: 1/2;
         background-color: #06865F;
     }
-    .single-img{
-        width: 100%;
-    }
     .profiling div{
         position: absolute;
         width: 300px;
@@ -120,8 +109,9 @@
     }
     .articles p{
         font-weight: 300;
-        font-size: 15px;
-        width: 90%;
+        font-size: 24px;
+        margin-left:;
+        width: 100%;
     }
     #form{
         display: flex;
@@ -138,17 +128,7 @@
         background-color: none;
         border-radius: 12px;
         border: 1px solid rgb(167, 167, 167);
-        outline: none;
-        padding-top: 5px;
-        padding-left: 5px;
     }
-    #form .errorr{
-        color: red;   
-        display: none; 
-        font-size: clamp(13px,15px,20px);
-        font-weight: 300;
-    }
- 
     #form div{
         display: flex;
         flex-direction: column;
@@ -160,7 +140,6 @@
         height: 30px;
         border: 1px solid rgb(167, 167, 167);
         border-radius: 12px;
-        outline: none;
     }
 #form button{
     padding: 5px 0px 5px 0px;
@@ -187,14 +166,6 @@
 #footer li{
     list-style: none;
 }
-#footer a{
-    color: white;
-    text-decoration: none;
-    letter-spacing: 3px;
-    font-size: 20px;
-    padding: 20px;
-    
-}
 #footer p{
     color: white;
     margin-left: 20px;
@@ -204,46 +175,17 @@
     #container{
         padding: 0;
     }
-
-    #nav .list-style {
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        background-color: rgb(0, 0, 0);
-        width:100vw;  
-        height: 70vh;
-        z-index:1;
-        left: 0px;
-        top: 20px;
-        bottom: 200px;
-        transition: 0.5s;
-        overflow: hidden;
-    }
-    #nav li img{
+    #nav ul{
         display: none;
-    }
-  .active{
-        visibility: hidden;
-        opacity: 0;
-    }
-    #nav a{
-        color: #06865F;
-        transition: 0.2s;
     }
     .burger-nav{
         display: block;
         position: relative;
-        left: 0px;
-        z-index: 2;
-        cursor: pointer;
+        left: 10px;
     }
     #logo img{
         width: 320px;
         height: 100px;
-    }
-    #logo{
-        z-index: 2;
-        cursor: pointer;
     }
     #form{
         display: flex;
@@ -299,4 +241,3 @@
 
 }
 
-    
