@@ -22,12 +22,12 @@ link3[0].addEventListener("click",function(){
     blog.style.display="none";
     querry.style.display="none";
 })
-//this is about table
+
 let table =document.getElementById('table')
 let commentAppend=document.getElementById("table2")
 let blogShow=document.getElementById("table3")
 let   TotalMsg=getContactInfo = JSON.parse(localStorage.getItem('users')) || [];
-//this is for the comment
+
 function showComment(){
     let params = (new URL(document.location)).searchParams;
     let name = params.get('id')
