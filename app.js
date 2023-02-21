@@ -52,20 +52,25 @@ if(getmessage.value===""){
 //this is for the contact message
 if(username.value.length>0 &&email.value.length>0 &&email.value.match(mailValid)&&getmessage.value.length>0){
   
-  let  usernameValue = username.value;
-  let emailValue = email.value;
-  let messageValue = getmessage.value;
+//   let  usernameValue = username.value;
+//   let emailValue = email.value;
+//   let messageValue = getmessage.value;
   
-  let getContactInfo = JSON.parse(localStorage.getItem('users')) || []
-       
-        getContactInfo.push({
-            id:  getContactInfo.length +1,
-            usernameValue:usernameValue,
-            emailValue:emailValue,
-            messageValue:messageValue 
-        })
-
- localStorage.setItem('users', JSON.stringify(getContactInfo))
+//   
+fetch("https://buka-dev.onrender.com/api/v1/contacts",{
+    method:"POST",
+    headers:{
+        "content-type":"application/json"
+    },
+    body:JSON.stringify({
+        username:username.value,
+        email:email.value,
+        message:getmessage.value
+    })
+})
+.then(res=>res.json())
+.then(data=>console.log(data))
+.catch(error=>console.log(error.message))
      username.value=="";
      email.value="";
      getmessage.value=""; 

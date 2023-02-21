@@ -183,7 +183,7 @@ p{
     max-width: 1fr;
     position: absolute;
     right: 350px;
-    top: 107px;
+    top: 143px;
     animation-name: image;
     animation-duration: 5s;
 }
@@ -216,8 +216,8 @@ p{
     height: 250px;
     width: 600px;
     position: absolute;
-    top: 376px;
-    right: 850px;
+    top: 416px;
+    right: 853px;
     opacity: 0.5;
 }
 #coder-cont{

@@ -51,19 +51,30 @@ signin.addEventListener("submit",function(e){
         return false;
     }
 if(accountName.value.length>0 && email.value.trim()!==""&&email.value.match(mailValid)&&pwd.value!=="" && pwd.value.length>=6 &&comfirmPWD.value!==""&&comfirmPWD.value===pwd.value){
-    let signinName=accountName.value;
-    let passwordValue=pwd.value;
-    localStorage.setItem('username',signinName)
-    localStorage.setItem('password',passwordValue)
+    // let signinName=accountName.value;
+    // let passwordValue=pwd.value;
+    // localStorage.setItem('username',signinName)
+    // localStorage.setItem('password',passwordValue)
+    fetch("https://buka-dev.onrender.com/api/v1/adminSignUp",{
+    method:"POST",
+    headers:{
+        "content-type":"application/json"
+    },
+    body:JSON.stringify({
+        username:accountName.value,
+        email:email.value,
+        password:pwd.value   ,
+    })
+})
+.then(res=>res.json())
+.then(data=>console.log(data))
+.catch(error=>console.log(error.message))
     accountName.value=""
     email.value=""
     pwd.value=""
     comfirmPWD.value=""
     console.log("success");
 }
-    
-
-
 })
 accountName.addEventListener("textInput",function(){
     if(accountName.value.length>0){
