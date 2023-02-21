@@ -33,7 +33,7 @@ let blogShow=document.getElementById("table3")
     // let name = params.get('id')
     // let getBlogInfo=JSON.parse(localStorage.getItem('blogInfo'))
     // let blogCont = getBlogInfo.find(x => x.id === name) 
- fetch(`http://localhost:5000/api/v1/comments`)
+ fetch(`https://buka-dev.onrender.com/api/v1/comments`)
     .then(res=>{return res.json()})
     .then(data=>{
         for (let datta of data){
@@ -61,7 +61,7 @@ async function myDelete(id){
 
     // localStorage.setItem('blogInfo', JSON.stringify(getBlogInfo))
     try{
- const res=await fetch(`http://localhost:5000/api/v1/comments/${id}`,{method:"DELETE"})
+ const res=await fetch(`https://buka-dev.onrender.com/api/v1/comments/${id}`,{method:"DELETE"})
 
     const data=res.json()
     console.log(data)
@@ -76,7 +76,7 @@ async function myDelete(id){
 
 
 function myFunction(){
-    fetch("http://localhost:5000/api/v1/contacts")
+    fetch("https://buka-dev.onrender.com/api/v1/contacts")
     .then(res=>{return res.json()})
     .then(message=>{
         for(let msg of message){
@@ -141,12 +141,12 @@ async function delBlog(id){
    
     //  localStorage.setItem('blogInfo', JSON.stringify(getBlogInfo))
     const token=localStorage.getItem('token')
-const res=await fetch(`https://buka-dev.onrender.com/api/v1/blogs/${id}`,{method:"DELETE"},
+const res=await fetch(`https://buka-dev.onrender.com/api/v1/blogs/${id}`,{method:"DELETE",headers:
 {Authorization:`Bearer ${token}`}
-)
+})
 const data=await res.json()
 console.log(data)
-    //window.location.reload()
+    window.location.reload()
 }
 //this is for the edit function
 // function editBlog(id){
