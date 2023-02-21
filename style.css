@@ -414,6 +414,12 @@ p{
     font-weight: 300;
 
 }
+#likinG{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap:10px
+}
 .input2{
     padding: 1px;
     width: 50%;

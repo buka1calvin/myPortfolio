@@ -22,20 +22,22 @@ fetch(`https://buka-dev.onrender.com/api/v1/blogs/${name}`)
     picture.value=data.picture
     editor.html.set(data.content)
     console.log(data)
-    const token=localStorage.getItem('token')
-    fetch(`https://buka-dev.onrender.com/api/v1/blogs/${name}`,{method:"PATCH",headers:{"content-type":"application/json",Authorization:`bearer ${token}`},body:{
-        title:title2.value,
-        summary:summary.value,
-        picture:picture.value,
-        content:description.value
-    }})
-    .catch(error=>console.log(error))
+    
+    
 })
 .catch(error=>console.log(error))
 }
 form2.addEventListener("submit",function(e){
     e.preventDefault();
-    blogEdits()
+    const token=localStorage.getItem('token')
+    fetch(`https://buka-dev.onrender.com/api/v1/blogs/${name}`,{method:"PATCH",headers:{"content-type":"application/json",Authorization:`Bearer ${token}`},
+    body:JSON.stringify({
+        title:title2.value,
+        summary:summary.value,
+        picture:picture.value,
+        content:description.value
+    })})
+    .catch(error=>console.log(error))
     // let editBlog= JSON.parse(localStorage.getItem('editBlog'))
     // let blogValues= JSON.parse(localStorage.getItem('blogInfo'))
 
@@ -53,8 +55,8 @@ form2.addEventListener("submit",function(e){
     
 
 })
-
 blogEdits()
+
 
 
 
