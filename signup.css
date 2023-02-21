@@ -6,7 +6,7 @@
 #main{
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)),url("/lorenzo-herrera-yP89apz2TAA-unsplash.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)),url("./lorenzo-herrera-yP89apz2TAA-unsplash.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   margin: auto;
@@ -28,8 +28,7 @@
     gap: 12px;
     border-radius: 12px;
     justify-content: center;
-    color: white;
-    
+    color: white;  
 }
 #link{
     align-self: flex-end;
@@ -75,9 +74,8 @@
     gap: 12px;
     border-radius: 12px;
     justify-content: center;
-    color: white;
-    display: none;
-    
+    color: white; 
+    display:none;  
 }
 #link2{
     align-self: flex-end;

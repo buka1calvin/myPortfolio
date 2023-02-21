@@ -9,17 +9,39 @@ let error3=document.getElementById("error3");
 let error4=document.getElementById("error4");
 let sameName=localStorage.getItem('username')
 let samePwd=localStorage.getItem('password')
-formValid.addEventListener("submit",function(e){
+formValid.addEventListener("submit",async function(e){
     e.preventDefault();
-    if(username.value===sameName&&password.value===samePwd){
-        window.location = "/dashboard/dashboard.html";
+    try{
+     const response=await fetch("https://buka-dev.onrender.com/api/v1/login",{method:"POST",
+        headers:{
+            "content-type":"application/json",
+        },
+        body:JSON.stringify({
+            username:username.value,
+            password:password.value
+        })
+    })
+if(response.status!=200){
+    console.log(response)
+}
+else{
+    const data= await response.json()
+    const accessToken=data.others.token
+    localStorage.setItem('token',accessToken)
+    console.log(data.others)
+     window.location="./dashboard/dashboard.html"
+}
     }
-    if(username.value!==sameName&&password.value!==samePwd){
-        error4.style.display="flex";
+    catch(error){
+        console.log(error.message)
     }
-    else{
-        error4.style.display="none";
-    }
+    
+    // if(username.value!==sameName&&password.value!==samePwd){
+    //     error4.style.display="flex";
+    // }
+    // else{
+    //     error4.style.display="none";
+    // }
 if(username.value.trim()===""){
     error1.style.display="flex";
     username.focus();
@@ -35,7 +57,6 @@ else if(password.value.length<6){
     password.focus();
     return false;
 }
-
 
 })
 username.addEventListener("textInput",function(){
