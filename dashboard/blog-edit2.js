@@ -38,6 +38,9 @@ form2.addEventListener("submit",function(e){
         content:description.value
     })})
     .catch(error=>console.log(error))
+    if(title2.value!==0 && summary.value!==0 && picture.value!==0){
+        document.querySelector("form").reset()
+    }
     // let editBlog= JSON.parse(localStorage.getItem('editBlog'))
     // let blogValues= JSON.parse(localStorage.getItem('blogInfo'))
 

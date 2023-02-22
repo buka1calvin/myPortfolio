@@ -86,13 +86,11 @@ blogForm.addEventListener("submit",async function(e){
             const data=await response.json();
             console.log(data);
             
-            document.querySelector("form").reset()
+             document.querySelector("form").reset()
                 }
                 catch(error){
                     console.log(error.message)
-                }
-       
-      
+                }  
     }
 }
 )

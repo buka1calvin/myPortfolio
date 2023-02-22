@@ -43,14 +43,11 @@ let blogShow=document.getElementById("table3")
         <td>${datta.message}</td>
         <td>${datta.email}</td>
         <td><img class="heart2"src="/article.svg" alt="">Article ${datta.blogId}</td>
-        <td><button type="submit" class="edit">contact arthor</button></td>
-        <td><button type="submit"onclick="myDelete('${datta._id}')"class="delete">delete query</button></td>`
+        <td><button type="submit"onclick="myDelete('${datta._id}')"class="delete">delete comments</button></td>`
              commentAppend.appendChild(div)
              console.log(data)
       }}
-    )
-
-  
+    ) 
 }
 showComment()
 async function myDelete(id){
@@ -119,16 +116,22 @@ function blogFunc(){
     .then(res=>{return res.json()})
     .then(blogs=>{
     for(let bloggs of blogs){
+        fetch(`https://buka-dev.onrender.com/api/v1/comments`)
+        .then(com=>{return com.json()})
+        .then(comment=>{
+            number=comment.length
+            console.log(number)
         let tableRow2=document.createElement("tr")
         tableRow2.innerHTML=`
                         <td>${bloggs._id}</td>
                         <td>${bloggs.title}</td>
                         <td><img class="heart"src="/heart 2.svg" alt=""> ${bloggs.likes} likes</td>
-                        <td>${bloggs.comments}Comments</td>
+                        <td>${comment.length}Comments</td>
                         <td><button type="submit" class="edit"><a class="blogLink" href="./blog-edits2.html?id=${bloggs._id}"alt="">Edit Blog</a></button></td>
                         <td><button type="submit" class="delete"onclick="delBlog('${bloggs._id}')">Delete Blog</button></td>
         `
         blogShow.appendChild(tableRow2)
+    })
     }
 })
 }
