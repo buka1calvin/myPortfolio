@@ -107,10 +107,15 @@
         color:#4B4848;
         font-weight: 200;
     }
-    .articles p{
+    #articlee{
+        width: 100%;
+    }
+    #articlee .single-img{
+        width:100%;
+    }
+    #articlee p{
         font-weight: 300;
-        font-size: 24px;
-        margin-left:;
+        font-size: 20px;
         width: 100%;
     }
     #form{
@@ -171,9 +176,15 @@
     margin-left: 20px;
     text-align: center;
 }
+#footer a{
+    text-decoration: none;
+    color: white;
+}
 @media only screen and (max-width:1200px){
     #container{
         padding: 0;
+        max-width: 100vw;
+        overflow-x: hidden;
     }
     #nav ul{
         display: none;

@@ -67,7 +67,10 @@ if(accountName.value.length>0 && email.value.trim()!==""&&email.value.match(mail
     })
 })
 .then(res=>res.json())
-.then(data=>console.log(data))
+.then(data=>{
+    
+    console.log(data)}
+)
 .catch(error=>console.log(error.message))
     accountName.value=""
     email.value=""

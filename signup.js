@@ -22,20 +22,24 @@ formValid.addEventListener("submit",async function(e){
         })
     })
 if(response.status!=200){
+     error4.style.display="flex"
     console.log(response)
 }
 else{
     const data= await response.json()
     const accessToken=data.others.token
     localStorage.setItem('token',accessToken)
+    error4.style.display="none"
+    error1.style.display="none";
+    error2.style.display="none";
     console.log(data.others)
+    document.querySelector("form").reset()
      window.location="./dashboard/dashboard.html"
 }
     }
     catch(error){
         console.log(error.message)
     }
-    
     // if(username.value!==sameName&&password.value!==samePwd){
     //     error4.style.display="flex";
     // }
@@ -57,7 +61,15 @@ else if(password.value.length<6){
     password.focus();
     return false;
 }
-
+if(!username.value && !password.value){
+    error4.style.display="flex"
+    return false
+}
+else if(username.value===true && password.value===true){
+    error4.style.display="none"
+    
+    return true
+}
 })
 username.addEventListener("textInput",function(){
     if(username.value.trim()!==""){
