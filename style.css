@@ -183,7 +183,7 @@ p{
     max-width: 1fr;
     position: absolute;
     right: 350px;
-    top: 143px;
+    top: 34.2%;
     animation-name: image;
     animation-duration: 5s;
 }
@@ -193,11 +193,11 @@ p{
     }
 }
 .el1{
-    height: 250px;
+    max-height: 350px;
     width: 280px;
     position: absolute;
-    top: 320px;
-    left: 300px;
+    top: 40%;
+    left: 10%;
     opacity: 0.5;
     animation-name: comp;
     animation-duration: 2s;
@@ -216,8 +216,8 @@ p{
     height: 250px;
     width: 600px;
     position: absolute;
-    top: 416px;
-    right: 853px;
+    top: 68.5%;
+    right: 64.9%;
     opacity: 0.5;
 }
 #coder-cont{
@@ -445,6 +445,9 @@ input,textarea{
      50%{
        width: 0%;
     }
+    100%{
+        width: 10%;
+    }
 
 }
 #form input{
@@ -540,10 +543,11 @@ input,textarea{
 .chart{
     grid-column: 5/8;
     grid-row: 1/2;
+    z-index: -2;
 }
 .chart img{
-    width: 380px;
-    right: 480px;
+    max-width: 380px;
+    right: 40%;
     position: absolute;
     margin-top: 22px;
 }
@@ -571,7 +575,7 @@ input,textarea{
     gap: 12px;
 }
 .skill-set img{
-    width: 500px;
+    max-width: 500px;
 }
 ul li{
 list-style: none;
@@ -587,7 +591,6 @@ list-style: none;
     flex-direction: column;
     align-items: center;
     gap: 12px;
-    justify-content: center;
     width: 100%;
 }
 #blogs h1{
@@ -601,17 +604,20 @@ color: #4B4848;
     display: grid;
     grid-template-columns: repeat(2,35vw);
     grid-template-rows: repeat(2,minmax(300px,auto));
-    margin-left: 0px;
-    right: 420px;
+    right: 10%;
     grid-gap: 100px;
     color: #4B4848;
+    width: 100%;
+    left: 0%;
+    align-self: flex-start;
 }
 #group div{
     display: flex;
     flex-direction: column;
-    gap: 12px; 
+    gap: 5px; 
     padding: 12px;
     box-shadow: 0px 1px 4px 3px rgba(0, 0, 0, 0.08);
+    margin-left: 20%;
     
 }
 
@@ -659,6 +665,9 @@ color: #4B4848;
     position: relative;
     left: 10px;
     top: 11px;
+}
+#likinG{
+    margin-left: 12px;
 }
 .more{
     align-self: center;
@@ -1014,6 +1023,8 @@ color: #4B4848;
     #group{
         display: flex;
         flex-direction: column;
+        align-items: center;
+        margin-right: 200px;
     }
     .icony{
         position: static;
