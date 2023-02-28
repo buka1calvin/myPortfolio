@@ -11,6 +11,16 @@ const ListBlogs=()=>{
     })
     },[])
     console.log(blogs)
+    const like = (id)=>{
+        setBlogs(blogs.map(el=>{
+          if(el._id == id){
+            el.likes= el.likes + 1
+          }
+          console.log(el)
+          return el;
+          
+        }))
+      } 
     return (
         blogs.map((element)=>{
          
@@ -23,12 +33,9 @@ const ListBlogs=()=>{
           <p onClick={()=>{window.location.href=`./blog.html?id=${linked}`}}>{element.summary}</p>
      
          <span id="likinG">{element.likes}
-         <div id={element._id} className="icony"onClick={ (_id) =>{
-                 fetch(`https://buka-dev.onrender.com/api/v1/blogs/${element._id}/likes`,{method:"POST"})
-                 .then(response=>{return response.json()})
-                .then(data=>{console.log(data)
-                     window.location.reload()
-         })}}>
+         <div id={element._id} className="icony"onClick={()=>{
+      like(element._id)
+    }}>
               <img src="./like.svg" alt=""/>
           </div>
   </span>
